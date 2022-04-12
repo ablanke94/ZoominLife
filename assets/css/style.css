@@ -60,7 +60,14 @@
 /* Purpose section css */
 #purpose-container {
   border: 2px solid black;
-/*  height: 25vh; */
+  /* height: 75vh; */
+}
+#teamImg {
+  float:left;
+}
+
+#purpose-title {
+  text-align: center;
 }
 
 /* SIGN UP section css */
