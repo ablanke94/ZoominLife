@@ -5,10 +5,48 @@
   height: 30vh;
   justify-content: space-evenly;
 }
+/* Weather section */
 #weather-api {
   border: 2px solid black;
   width: 50%;
 }
+
+#weather-section {
+  display: inline-block;
+}
+#hr24-section {
+  display: none;
+}
+#weekly-section {
+  display: none;
+}
+
+#weather-header-section {
+  display: flex;
+  flex-direction: row;
+}
+
+#weather-nav {
+  margin-bottom: 0%;
+}
+
+#weather-nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: fit-content;
+}
+
+#current-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#current-title {
+  text-align: center;
+  margin: 0%;
+}
+
 #bike-trail-api {
   border: 2px solid black;
   width: 50%;
