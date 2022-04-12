@@ -3,6 +3,7 @@ var city = "Austin";
 var key = '7e0d1756ab93961fb340fd9cdc867eda';
 var coords = [];
 
+
 // function DECLARATIONS
 
 function weatherApi() {
@@ -31,6 +32,16 @@ function weatherApi() {
 weatherApi();
 console.log(coords);
 
+
+// save email to local storage 
+document.getElementById("signUpBtn").addEventListener("click", function (event) {
+    //event.preventDefaults();
+    var userEmail = document.getElementById("userEmail");
+    localStorage.setItem("email", userEmail.value);
+  });
+
+
 var script = document.createElement("script");
 script.setAttribute("src", "https://es.pinkbike.org/ttl-86400/sprt/j/trailforks/widget.js");
 document.getElementsByTagName("head")[0].appendChild(script); var widgetCheck = false;
+
