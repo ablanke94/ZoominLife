@@ -10,6 +10,7 @@ var currWindSpeed = document.getElementById('current-wind-speed');
 var currSunrise = document.getElementById('current-sunrise');
 var currSunset = document.getElementById('current-sunset');
 
+
 // function DECLARATIONS
 // Weather API functions
 function weatherApi() {
@@ -72,12 +73,22 @@ function currentWeather(temp, weather, windSpeed, sunrise, sunset) {
 
 function weatherIcon() {}
 
+
 // End of weather API's
 // function declaration END
 weatherApi();
 
-// Weather api Collapsable menu initialization
-document.addEventListener('DOMContentLoaded', function () {
-  var elems = document.querySelectorAll('.collapsible');
-  M.Collapsible.init(elems, {});
-});
+console.log(coords);
+
+
+// save email to local storage 
+document.getElementById("signUpBtn").addEventListener("click", function (event) {
+    //event.preventDefaults();
+    var userEmail = document.getElementById("userEmail");
+    localStorage.setItem("email", userEmail.value);
+  });
+
+// Trail api
+var script = document.createElement("script");
+script.setAttribute("src", "https://es.pinkbike.org/ttl-86400/sprt/j/trailforks/widget.js");
+document.getElementsByTagName("head")[0].appendChild(script); var widgetCheck = false;
