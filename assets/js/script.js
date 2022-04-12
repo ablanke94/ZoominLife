@@ -30,3 +30,9 @@ function weatherApi(){
 
 weatherApi();
 console.log(coords);
+
+document.addEventListener('DOMContentLoaded', function () {
+    var modalElem = document.querySelector('.modal');
+    var instance = M.Modal.init(modalElem);
+    instance.open();
+});
