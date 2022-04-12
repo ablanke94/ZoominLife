@@ -16,7 +16,7 @@
 /* HERO section css */
 #hero-container {
   border: 2px solid black;
-  height: 30vh;
+/*  height: 30vh; */
 }
 
 /* Purpose section css */
@@ -35,18 +35,18 @@
 /* SIGN UP section css */
 #sign-up-container {
   border: 2px solid black;
-  height: 25vh;
+/*  height: 25vh; */
 }
 
 /* Contact Us section css */
 #contact-us-container {
   border: 2px solid black;
-  height: 25vh;
+/*  height: 25vh; */
 }
 
 /* Footer section css */
 #footer-container {
   border: 2px solid black;
-  height: 25vh;
+/*  height: 25vh; */
 }
 
