@@ -11,6 +11,14 @@
   border: 0;
 }
 
+.shopLinks li {
+  margin: 3px 0px 3px 0px;
+}
+
+.supportLinks li {
+  margin: 3px 0px 3px 0px;
+}
+
 /* api container custom css */
 #api-container {
   display: flex;
