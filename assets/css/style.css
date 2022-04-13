@@ -45,7 +45,12 @@
   text-align: center;
   margin: 0%;
 }
+#current-data {
+  padding-top: 2%;
+  padding-left: 10%;
+}
 
+/* BIKE trail */
 #bike-trail-api {
   border: 2px solid black;
   width: 50%;
@@ -59,11 +64,13 @@
 
 #hero-title {
   text-align: center;
+
 }
 
 /* Purpose section css */
 #purpose-container {
   border: 2px solid black;
+
 }
 
 #teamImg {
@@ -77,18 +84,17 @@
 /* SIGN UP section css */
 #sign-up-container {
   border: 2px solid black;
-/*  height: 25vh; */
+  /*  height: 25vh; */
 }
 
 /* Contact Us section css */
 #contact-us-container {
   border: 2px solid black;
-/*  height: 25vh; */
+  /*  height: 25vh; */
 }
 
 /* Footer section css */
 #footer-container {
   border: 2px solid black;
-/*  height: 25vh; */
+  /*  height: 25vh; */
 }
-
