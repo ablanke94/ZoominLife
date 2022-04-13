@@ -82,6 +82,13 @@ function currentWeather(temp, weather, windSpeed, sunrise, sunset) {
 function weatherIcon() {}
 
 // End of weather API's
+
+// Carousel
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  M.Carousel.init(elems);
+});
+
 // function declaration END
 weatherApi();
 
