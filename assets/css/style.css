@@ -13,10 +13,11 @@
 #weather-section {
   display: inline-block;
 }
-#hr24-section {
+
+#current-section {
   display: none;
 }
-#weekly-section {
+#hr24-section {
   display: none;
 }
 
@@ -49,6 +50,22 @@
   padding-top: 2%;
   padding-left: 10%;
 }
+/* WEAHTER WEEKLY */
+#weekly-section {
+  display: flex;
+  flex-direction: column;
+}
+#Weekly-title {
+  display: flex;
+  justify-content: center;
+  margin: 0%;
+}
+#weekly-display {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1%;
+  justify-content: space-around;
+}
 
 /* BIKE trail */
 #bike-trail-api {
@@ -64,17 +81,15 @@
 
 #hero-title {
   text-align: center;
-
 }
 
 /* Purpose section css */
 #purpose-container {
   border: 2px solid black;
-
 }
 
 #teamImg {
-  float:left;
+  float: left;
 }
 
 #purpose-title {
