@@ -1,7 +1,6 @@
 // Variables
 var city = 'Austin';
 var key = '7e0d1756ab93961fb340fd9cdc867eda';
-var coords = [];
 var weatherBtn = document.querySelector('.dropdown-trigger');
 // weather API variables
 var currTemp = document.getElementById('current-temp');
@@ -9,8 +8,7 @@ var currWeather = document.getElementById('current-weather');
 var currWindSpeed = document.getElementById('current-wind-speed');
 var currSunrise = document.getElementById('current-sunrise');
 var currSunset = document.getElementById('current-sunset');
-
-//                                                                                                           unix time and weather icons
+var currDate = document.getElementById('current-date');
 
 // function DECLARATIONS
 // Weather API functions (LAT, LON)
@@ -55,10 +53,13 @@ function eightDayForecast(lat, lon, key) {
 
           let sunrise = moment.unix(data.current.sunrise).format('h:mm a');
           let sunset = moment.unix(data.current.sunset).format('h:mm a');
-          currentWeather(temp, weather, windSpeed, sunrise, sunset);
 
-          let weeklyWeather = data.daily;
-          weatherIcon(weeklyWeather);
+          let currentDT = data.daily[0].dt;
+          sevenDayData(data, currentDT);
+          let todaysDate = moment.unix(currentDT).format('dddd');
+          currentWeather(todaysDate, temp, weather, windSpeed, sunrise, sunset);
+
+          // console.log(sevenDayData(currentDT));
         });
       } else {
         alert('Error: ' + response.statusText); // if response was not okay then its sending an Alert (which is bad bc its a blocker) with the response status displayed
@@ -69,7 +70,8 @@ function eightDayForecast(lat, lon, key) {
     });
 }
 
-function currentWeather(temp, weather, windSpeed, sunrise, sunset) {
+function currentWeather(date, temp, weather, windSpeed, sunrise, sunset) {
+  currDate.textContent = "Today's Date: " + date;
   currTemp.textContent = 'Current Temperature: ' + temp + '°F';
   currWeather.textContent = 'Current Weather: ' + weather;
   currWindSpeed.textContent =
@@ -81,10 +83,81 @@ function currentWeather(temp, weather, windSpeed, sunrise, sunset) {
 function weatherIcon(weeklyIcons) {
   console.log(weeklyIcons);
   for (let i = 0; i < weeklyIcons.length; i++) {
-    
+    console.log(weeklyIcons[i].weather[0].id);
+    var dailyWeatherId = weeklyIcons[i].weather[0].id;
+    // take in the day and give it the icon
+    assignIcon(dailyWeatherId, i);
+    // append the image to the correct id based on index (days from today)
+    // var block = document.getElementById("Weekly-title");
+    // var block = document.getElementById("day" + [i]);
+    // block.appendChild(img);
   }
 }
 
+function assignIcon(dailyIcon, dayNum) {
+  var img = document.createElement('img');
+  if (dailyIcon > 800) {
+    img.src = 'assets/images/Weather_Icons/clouds.png';
+    img.className += 'weather-icon';
+    var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyIcon === 800) {
+    img.src = 'assets/images/Weather_Icons/clear.png';
+    img.className += 'weather-icon';
+    var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyIcon > 700) {
+    img.src = 'assets/images/Weather_Icons/fog.png';
+    img.className += 'weather-icon';
+    var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyIcon >= 600) {
+    img.src = 'assets/images/Weather_Icons/snow.png';
+    img.className += 'weather-icon';
+    var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyIcon >= 500) {
+    img.src = 'assets/images/Weather_Icons/rain.png';
+    img.className += 'weather-icon';
+    var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyIcon >= 300) {
+    img.src = 'assets/images/Weather_Icons/drizzle.png';
+    img.className += 'weather-icon';
+    var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyIcon >= 200) {
+    img.src = 'assets/images/Weather_Icons/thunder.png';
+    img.className += 'weather-icon';
+    var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else {
+    console.log('big error lol');
+  }
+}
+
+function sevenDayData(data, currentDT) {
+  for (let i = 1; i <= 7; i++) {
+    // Data Analysis
+    let corrWeather = data.daily[i].weather[0].id;
+    console.log(corrWeather);
+    let corrTemp = data.daily[i].temp.day;
+    let corrWind = data.daily[i].wind_speed;
+
+    // TEXT CONTENT
+    let determinedDate = moment.unix(currentDT).add([i], 'days').format('dddd');
+    let displayedDate = document.getElementById('day' + i);
+    displayedDate.textContent = determinedDate;
+    let determinedWeather = document.getElementById('determined-weather' + i);
+    console.log(i);
+    console.log(determinedWeather);
+    determinedWeather.textContent = corrWeather;
+    let determinedTemp = document.getElementById('determined-temp' + i);
+    determinedTemp.textContent = corrTemp;
+    let determinedWind = document.getElementById('determined-wind-speed' + i);
+    determinedWind.textContent = corrWind;
+  }
+}
 // End of weather API's
 
 // Carousel
@@ -95,8 +168,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // function declaration END
 weatherApi();
-
-console.log(coords);
 
 // save email to local storage
 document

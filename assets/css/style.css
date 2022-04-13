@@ -91,6 +91,10 @@
   justify-content: space-evenly;
 }
 /* Weather section */
+.weather-icon {
+  max-width: 30%;
+}
+
 #weather-api {
   border: 2px solid black;
   width: 50%;
