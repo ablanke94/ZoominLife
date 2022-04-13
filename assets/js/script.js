@@ -88,51 +88,6 @@ function weatherIcon(weeklyIcons) {
     // take in the day and give it the icon
     assignIcon(dailyWeatherId, i);
     // append the image to the correct id based on index (days from today)
-    // var block = document.getElementById("Weekly-title");
-    // var block = document.getElementById("day" + [i]);
-    // block.appendChild(img);
-  }
-}
-
-function assignIcon(dailyIcon, dayNum) {
-  var img = document.createElement('img');
-  if (dailyIcon > 800) {
-    img.src = 'assets/images/Weather_Icons/clouds.png';
-    img.className += 'weather-icon';
-    var block = document.getElementById('day' + dayNum);
-    block.appendChild(img);
-  } else if (dailyIcon === 800) {
-    img.src = 'assets/images/Weather_Icons/clear.png';
-    img.className += 'weather-icon';
-    var block = document.getElementById('day' + dayNum);
-    block.appendChild(img);
-  } else if (dailyIcon > 700) {
-    img.src = 'assets/images/Weather_Icons/fog.png';
-    img.className += 'weather-icon';
-    var block = document.getElementById('day' + dayNum);
-    block.appendChild(img);
-  } else if (dailyIcon >= 600) {
-    img.src = 'assets/images/Weather_Icons/snow.png';
-    img.className += 'weather-icon';
-    var block = document.getElementById('day' + dayNum);
-    block.appendChild(img);
-  } else if (dailyIcon >= 500) {
-    img.src = 'assets/images/Weather_Icons/rain.png';
-    img.className += 'weather-icon';
-    var block = document.getElementById('day' + dayNum);
-    block.appendChild(img);
-  } else if (dailyIcon >= 300) {
-    img.src = 'assets/images/Weather_Icons/drizzle.png';
-    img.className += 'weather-icon';
-    var block = document.getElementById('day' + dayNum);
-    block.appendChild(img);
-  } else if (dailyIcon >= 200) {
-    img.src = 'assets/images/Weather_Icons/thunder.png';
-    img.className += 'weather-icon';
-    var block = document.getElementById('day' + dayNum);
-    block.appendChild(img);
-  } else {
-    console.log('big error lol');
   }
 }
 
@@ -145,6 +100,8 @@ function sevenDayData(data, currentDT) {
     let corrWind = data.daily[i].wind_speed;
 
     // TEXT CONTENT
+    let determinedIconEl = document.getElementById('determined-Icon' + i);
+    assignIcon(corrWeather, determinedIconEl);
     let determinedDate = moment.unix(currentDT).add([i], 'days').format('dddd');
     let displayedDate = document.getElementById('day' + i);
     displayedDate.textContent = determinedDate;
@@ -158,6 +115,49 @@ function sevenDayData(data, currentDT) {
     determinedWind.textContent = corrWind;
   }
 }
+
+function assignIcon(dailyId, block) {
+  var img = document.createElement('img');
+  if (dailyId > 800) {
+    img.src = 'assets/images/Weather_Icons/clouds.png';
+    img.className += 'weather-icon';
+    // var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyId === 800) {
+    img.src = 'assets/images/Weather_Icons/clear.png';
+    img.className += 'weather-icon';
+    // var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyId > 700) {
+    img.src = 'assets/images/Weather_Icons/fog.png';
+    img.className += 'weather-icon';
+    // var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyId >= 600) {
+    img.src = 'assets/images/Weather_Icons/snow.png';
+    img.className += 'weather-icon';
+    // var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyId >= 500) {
+    img.src = 'assets/images/Weather_Icons/rain.png';
+    img.className += 'weather-icon';
+    // var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyId >= 300) {
+    img.src = 'assets/images/Weather_Icons/drizzle.png';
+    img.className += 'weather-icon';
+    // var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else if (dailyId >= 200) {
+    img.src = 'assets/images/Weather_Icons/thunder.png';
+    img.className += 'weather-icon';
+    // var block = document.getElementById('day' + dayNum);
+    block.appendChild(img);
+  } else {
+    console.log('big error lol');
+  }
+}
+
 // End of weather API's
 
 // Carousel
