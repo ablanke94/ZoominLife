@@ -45,6 +45,17 @@
   margin: 3px 0px 3px 0px;
 }
 
+/* nav always at top on scroll */
+#nav-container {
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -o-sticky;
+  position: -ms-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 /* api container custom css */
 #api-container {
   display: flex;
@@ -145,22 +156,23 @@
 
 /* SIGN UP section css */
 #sign-up-container {
-  border: 2px solid black;
+  border: 0px solid black;
   /*  height: 25vh; */
 }
 
 /* Contact Us section css */
 #contact-us-container {
-  border: 2px solid black;
+  border: 0px solid black;
   /*  height: 25vh; */
 }
 
 /* Footer section css */
 #footer-container {
-  border: 2px solid black;
+  border: 0px solid black;
   /*  height: 25vh; */
 }
 
+/* shop button move up */
 #button-div {
   position: relative;
   top: -20px;
