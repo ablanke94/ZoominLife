@@ -1,3 +1,12 @@
+/* start style.css */
+
+.hoursTable th,
+.hoursTable td,
+.hoursTable tr {
+  padding: 5px 5px 5px 5px;
+  border: 0;
+}
+
 /* api container custom css */
 #api-container {
   display: flex;
