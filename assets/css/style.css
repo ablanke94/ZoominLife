@@ -84,15 +84,20 @@
 /* HERO section css */
 #hero-container {
   border: 2px solid black;
-  /*  height: 30vh; */
+  background-image: url(../images/street.png);
+}
+
+#hero-title {
+  text-align: center;
+
 }
 
 /* Purpose section css */
 #purpose-container {
   border: 2px solid black;
 
-  /* height: 75vh; */
 }
+
 #teamImg {
   float:left;
 }
