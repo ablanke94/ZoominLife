@@ -1,4 +1,9 @@
 /* start style.css */
+.row {
+  width: 96%;
+  margin-left: 2%;
+}
+
 .carousel .carousel-item {
   width: 400px;
   height: 400px;
@@ -133,8 +138,9 @@
 
 /* HERO section css */
 #hero-container {
-  border: 2px solid black;
-  background-image: url(../images/street.png);
+  border: 0px solid black;
+  margin-left: 2%;
+  /* background-image: url(../images/street.png); */
 }
 
 #hero-title {
@@ -143,7 +149,7 @@
 
 /* Purpose section css */
 #purpose-container {
-  border: 2px solid black;
+  border: 0px solid black;
 }
 
 #teamImg {
