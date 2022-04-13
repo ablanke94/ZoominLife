@@ -1,4 +1,8 @@
 /* start style.css */
+.hoursTable {
+  margin-top: 14.5px;
+  margin-bottom: 0px;
+}
 
 .hoursTable th,
 .hoursTable td,
