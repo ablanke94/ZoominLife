@@ -13,7 +13,7 @@ var currSunset = document.getElementById('current-sunset');
 //                                                                                                           unix time and weather icons
 
 // function DECLARATIONS
-// Weather API functions
+// Weather API functions (LAT, LON)
 function weatherApi() {
   var apiUrl =
     'http://api.openweathermap.org/geo/1.0/direct?q=' +
@@ -53,9 +53,12 @@ function eightDayForecast(lat, lon, key) {
           var weather = data.current.weather[0].main;
           let windSpeed = data.current.wind_speed;
 
-          let sunrise = utixTimeStamp(data.current.sunrise);
-          let sunset = utixTimeStamp(data.current.sunset);
+          let sunrise = moment.unix(data.current.sunrise).format('h:mm a');
+          let sunset = moment.unix(data.current.sunset).format('h:mm a');
           currentWeather(temp, weather, windSpeed, sunrise, sunset);
+
+          let weeklyWeather = data.daily;
+          weatherIcon(weeklyWeather);
         });
       } else {
         alert('Error: ' + response.statusText); // if response was not okay then its sending an Alert (which is bad bc its a blocker) with the response status displayed
@@ -64,13 +67,6 @@ function eightDayForecast(lat, lon, key) {
     .catch(function (error) {
       alert('1 Unable to connect to weatherAPI'); //is there is a server side error then an Alert (which is bad bc its a blocker) with the response will be displayed
     });
-}
-
-// function to convert unix to day/time NOT WORKING
-function utixTimeStamp(timeStamp) {
-  dateObj = new Date(timeStamp * 1000);
-  utcString = dateObj.toUTCString();
-  return utcString.slice(-11, -4);
 }
 
 function currentWeather(temp, weather, windSpeed, sunrise, sunset) {
@@ -82,12 +78,17 @@ function currentWeather(temp, weather, windSpeed, sunrise, sunset) {
   currSunset.textContent = "Today's Sunset: " + sunset;
 }
 
-function weatherIcon() {}
+function weatherIcon(weeklyIcons) {
+  console.log(weeklyIcons);
+  for (let i = 0; i < weeklyIcons.length; i++) {
+    
+  }
+}
 
 // End of weather API's
 
 // Carousel
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.carousel');
   M.Carousel.init(elems);
 });
@@ -114,6 +115,3 @@ script.setAttribute(
 );
 document.getElementsByTagName('head')[0].appendChild(script);
 var widgetCheck = false;
-
-var now = moment();
-console.log(now);
