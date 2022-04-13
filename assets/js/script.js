@@ -13,7 +13,7 @@ var currSunset = document.getElementById('current-sunset');
 //                                                                                                           unix time and weather icons
 
 // function DECLARATIONS
-// Weather API functions
+// Weather API functions (LAT, LON)
 function weatherApi() {
   var apiUrl =
     'http://api.openweathermap.org/geo/1.0/direct?q=' +
@@ -87,7 +87,7 @@ function weatherIcon() {}
 // End of weather API's
 
 // Carousel
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.carousel');
   M.Carousel.init(elems);
 });
