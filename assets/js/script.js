@@ -10,6 +10,8 @@ var currWindSpeed = document.getElementById('current-wind-speed');
 var currSunrise = document.getElementById('current-sunrise');
 var currSunset = document.getElementById('current-sunset');
 
+//                                                                                                           unix time and weather icons
+
 // function DECLARATIONS
 // Weather API functions
 function weatherApi() {
@@ -28,11 +30,11 @@ function weatherApi() {
       let lon = data[0].lon;
 
       // function here
-      fiveDayForecast(lat, lon, key);
+      eightDayForecast(lat, lon, key);
     });
 }
 
-function fiveDayForecast(lat, lon, key) {
+function eightDayForecast(lat, lon, key) {
   let apiUrl =
     'https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=' +
     lat +
@@ -64,6 +66,7 @@ function fiveDayForecast(lat, lon, key) {
     });
 }
 
+// function to convert unix to day/time NOT WORKING
 function utixTimeStamp(timeStamp) {
   dateObj = new Date(timeStamp * 1000);
   utcString = dateObj.toUTCString();
@@ -111,3 +114,6 @@ script.setAttribute(
 );
 document.getElementsByTagName('head')[0].appendChild(script);
 var widgetCheck = false;
+
+var now = moment();
+console.log(now);
