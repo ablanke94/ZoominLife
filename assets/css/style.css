@@ -2,7 +2,11 @@
 .carousel .carousel-item {
   width: 400px;
   height: 400px;
+  top: 50px; /* moves the images down to center */
+}
 
+#hero-container {
+  margin: 0px;
 }
 
 .contactUsList li {
