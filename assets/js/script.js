@@ -55,8 +55,8 @@ function eightDayForecast(lat, lon, key) {
           let sunset = moment.unix(data.current.sunset).format('h:mm a');
           currentWeather(temp, weather, windSpeed, sunrise, sunset);
 
-          let weeklyWeather = data.daily;
-          weatherIcon(weeklyWeather);
+          // let weeklyWeather = data.daily;
+          // weatherIcon(weeklyWeather);    Commenting out for ease of merge
         });
       } else {
         alert('Error: ' + response.statusText); // if response was not okay then its sending an Alert (which is bad bc its a blocker) with the response status displayed
