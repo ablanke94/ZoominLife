@@ -11,7 +11,7 @@ var currSunrise = document.getElementById('current-sunrise');
 var currSunset = document.getElementById('current-sunset');
 
 // function DECLARATIONS
-// Weather API functions
+// Weather API functions (LAT, LON)
 function weatherApi() {
   var apiUrl =
     'http://api.openweathermap.org/geo/1.0/direct?q=' +
@@ -28,11 +28,11 @@ function weatherApi() {
       let lon = data[0].lon;
 
       // function here
-      fiveDayForecast(lat, lon, key);
+      eightDayForecast(lat, lon, key);
     });
 }
 
-function fiveDayForecast(lat, lon, key) {
+function eightDayForecast(lat, lon, key) {
   let apiUrl =
     'https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat=' +
     lat +
@@ -84,7 +84,7 @@ function weatherIcon() {}
 // End of weather API's
 
 // Carousel
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.carousel');
   M.Carousel.init(elems);
 });

@@ -13,11 +13,19 @@
 #weather-section {
   display: inline-block;
 }
+
+#current-section {
+  display: none;
+}
 #hr24-section {
   display: none;
 }
 #weekly-section {
-  display: none;
+  display: inline-block;
+}
+#Weekly-title {
+  text-align: center;
+  margin: 0%;
 }
 
 #weather-header-section {
@@ -64,17 +72,15 @@
 
 #hero-title {
   text-align: center;
-
 }
 
 /* Purpose section css */
 #purpose-container {
   border: 2px solid black;
-
 }
 
 #teamImg {
-  float:left;
+  float: left;
 }
 
 #purpose-title {
