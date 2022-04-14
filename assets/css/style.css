@@ -120,6 +120,8 @@ body{
   position: fixed;
   width: 100%;
   margin-top: 12px;
+  top: 15px;
+  
 }
 
 .weather-icon {
