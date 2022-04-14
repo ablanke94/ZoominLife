@@ -80,7 +80,8 @@
 }
 
 .weather-icon {
-  max-width: 40%;
+  max-width: 90%;
+  padding: 0%;
 }
 
 .weekly-day {
@@ -120,7 +121,8 @@
   text-align: center;
 }
 #current-section {
-  display: none;
+  display: inline-block;
+  width: 100%;
 }
 
 #weather-header-section {
@@ -144,19 +146,30 @@
 #current-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
 }
-
+#current-icon {
+  margin: 0 auto;
+  max-width: 10%;
+  padding: 0%;
+}
 #current-title {
   text-align: center;
   margin: 0%;
 }
-#current-data {
-  padding-top: 2%;
-  padding-left: 10%;
+#current-date {
+  border-bottom: solid 1px gray;
+  margin: 0%;
+}
+
+.curr-data {
+  display: flex;
+  justify-content: center;
 }
 /* WEAHTER WEEKLY */
 #weekly-section-section {
-  display: inline-block;
+  display: none;
 }
 #weekly-section {
   display: flex;
@@ -176,8 +189,10 @@
 #dayKey {
   padding-right: 1%;
 }
-#weekly-data {
+.weekly-data {
+  display: flex;
   justify-content: center;
+  padding-right: 3%;
 }
 
 /* BIKE trail */

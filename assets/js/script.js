@@ -11,8 +11,10 @@ var currWindSpeed = document.getElementById('current-wind-speed');
 var currSunrise = document.getElementById('current-sunrise');
 var currSunset = document.getElementById('current-sunset');
 var currDate = document.getElementById('current-date');
+var currIcon = document.getElementById('current-icon');
 var currentBtn = document.getElementById('current-btn');
 var weeklyBtn = document.getElementById('weekly-btn');
+console.log(currIcon);
 
 // function DECLARATIONS
 // Weather API functions (LAT, LON)
@@ -52,7 +54,8 @@ function eightDayForecast(lat, lon, key) {
         response.json().then(function (data) {
           console.log(data);
           var temp = data.current.temp;
-          var weather = data.current.weather[0].main;
+          var weather = data.current.weather[0].description;
+          var currWeatherId = data.current.weather[0].id;
           let windSpeed = data.current.wind_speed;
 
           let sunrise = moment.unix(data.current.sunrise).format('h:mm a');
@@ -61,7 +64,15 @@ function eightDayForecast(lat, lon, key) {
           let currentDT = data.daily[0].dt;
           sevenDayData(data, currentDT);
           let todaysDate = moment.unix(currentDT).format('dddd');
-          currentWeather(todaysDate, temp, weather, windSpeed, sunrise, sunset);
+          currentWeather(
+            todaysDate,
+            temp,
+            weather,
+            currWeatherId,
+            windSpeed,
+            sunrise,
+            sunset
+          );
 
           // console.log(sevenDayData(currentDT));
         });
@@ -74,14 +85,22 @@ function eightDayForecast(lat, lon, key) {
     });
 }
 
-function currentWeather(date, temp, weather, windSpeed, sunrise, sunset) {
-  currDate.textContent = "Today's Date: " + date;
-  currTemp.textContent = 'Current Temperature: ' + temp + '°F';
-  currWeather.textContent = 'Current Weather: ' + weather;
-  currWindSpeed.textContent =
-    'Current Wind Speed: ' + windSpeed + ' miles/hour';
-  currSunrise.textContent = "Today's Sunrise: " + sunrise;
-  currSunset.textContent = "Today's Sunset: " + sunset;
+function currentWeather(
+  date,
+  temp,
+  weather,
+  currWeatherId,
+  windSpeed,
+  sunrise,
+  sunset
+) {
+  currDate.textContent = date;
+  assignIcon(currWeatherId, currIcon);
+  currTemp.textContent = Math.round(temp) + '°F';
+  currWeather.textContent = weather;
+  currWindSpeed.textContent = Math.round(windSpeed) + ' mph';
+  currSunrise.textContent = 'Sunrise: ' + sunrise;
+  currSunset.textContent = 'Sunset: ' + sunset;
 }
 
 function weatherIcon(weeklyIcons) {
@@ -98,14 +117,15 @@ function weatherIcon(weeklyIcons) {
 function sevenDayData(data, currentDT) {
   for (let i = 1; i <= 7; i++) {
     // Data Analysis
-    let corrWeather = data.daily[i].weather[0].id;
+    let corrWeatherId = data.daily[i].weather[0].id;
+    let corrWeather = data.daily[i].weather[0].main;
     console.log(corrWeather);
     let corrTemp = data.daily[i].temp.day;
     let corrWind = data.daily[i].wind_speed;
 
     // TEXT CONTENT
     let determinedIconEl = document.getElementById('determined-Icon' + i);
-    assignIcon(corrWeather, determinedIconEl);
+    assignIcon(corrWeatherId, determinedIconEl);
     let determinedDate = moment
       .unix(currentDT)
       .add([i], 'days')
@@ -118,9 +138,9 @@ function sevenDayData(data, currentDT) {
     console.log(determinedWeather);
     determinedWeather.textContent = corrWeather;
     let determinedTemp = document.getElementById('determined-temp' + i);
-    determinedTemp.textContent = Math.round(corrTemp);
+    determinedTemp.textContent = Math.round(corrTemp) + '°F';
     let determinedWind = document.getElementById('determined-wind-speed' + i);
-    determinedWind.textContent = Math.round(corrWind);
+    determinedWind.textContent = Math.round(corrWind) + ' mph';
   }
 }
 

@@ -44,79 +44,72 @@
             <li><button id="weekly-btn">Weekly </button></li>
           </ul>
         </div>
-        <section id="current-section" data-display="hidden">
+        <section id="current-section" data-display="visible">
           <div id="current-container">
-            <h5 class="" id="current-title">
+            <h5 id="current-title">
               Austin's Current Weather Forecast
             </h5>
             <ul class="col s7" id="current-data">
-              <li id="current-date"></li>
-              <li id="current-weather"></li>
-              <li id="current-temp"></li>
-              <li id="current-wind-speed"></li>
-              <li id="current-sunrise"></li>
-              <li id="current-sunset"></li>
+              <li class="curr-data" ><h5 id="current-date"></h5></li>
+              <li class="curr-data weather-icon" id="current-icon"></li>
+              <li class="curr-data" id="current-weather"></li>
+              <li class="curr-data" id="current-temp"></li>
+              <li class="curr-data" id="current-wind-speed"></li>
+              <li class="curr-data" id="current-sunrise"></li>
+              <li class="curr-data" id="current-sunset"></li>
             </ul>
           </div>
         </section>
 
-        <section data-display="visible" id="weekly-section-section">
+        <section data-display="hidden" id="weekly-section-section">
           <div id="weekly-section">
             <h5 id="Weekly-title">Austin's Weekly Forecast</h5>
             <ul id="weekly-display">
-              <ul class="col s7" id="dayKey">
-                <h6>Day:</h6>
-                <br>
-                <br>
-                <li>Weather</li>
-                <li>Temperature:</li>
-                <li>Wind Speed (MPH):</li>
-              </ul>
               <ul class="col s7 weekly-day" id="day1-data">
-                <h6 id="day1">day</h6>
-                <li class="weekly-data" id="determined-Icon1"></li>
+                <h6 class="weekly-data" id="day1">day</h6>
+                <li class="weekly-data weather-icon" id="determined-Icon1"></li>
                 <li class="weekly-data" id="determined-weather1"></li>
                 <li class="weekly-data" id="determined-temp1"></li>
                 <li class="weekly-data" id="determined-wind-speed1"></li>
               </ul>
               <ul class="col s7 weekly-day" id="day2-data">
-                <h6 id="day2">day</h6>
-                <li class="weekly-data" id="determined-Icon2"></li>
+                <h6 class="weekly-data"id="day2">day</h6>
+                <li class="weekly-data weather-icon" id="determined-Icon2"></li>
                 <li class="weekly-data" id="determined-weather2"></li>
                 <li class="weekly-data" id="determined-temp2"></li>
                 <li class="weekly-data" id="determined-wind-speed2"></li>
               </ul>
               <ul class="col2s7 weekly-day" id="day3-data">
-                <h6 id="day3">day</h6>
-                <li class="weekly-data" id="determined-Icon3"></li>
+                <h6 class="weekly-data" id="day3">day</h6>
+                <li class="weekly-data weather-icon" id="determined-Icon3"></li>
                 <li class="weekly-data" id="determined-weather3"></li>
                 <li class="weekly-data" id="determined-temp3"></li>
                 <li class="weekly-data" id="determined-wind-speed3"></li>
               </ul>
               <ul class="col2s7 weekly-day" id="day4-data">
-                <h6 id="day4">day</h6>
-                <li class="weekly-data" id="determined-Icon4"></li>
+                <h6 class="weekly-data" id="day4">day</h6>
+                <li class="weekly-data weather-icon" id="determined-Icon4"></li>
                 <li class="weekly-data" id="determined-weather4"></li>
                 <li class="weekly-data" id="determined-temp4"></li>
                 <li class="weekly-data" id="determined-wind-speed4"></li>
               </ul>
               <ul class="col2s7 weekly-day" id="day5-data">
-                <h6 id="day5">day</h6>
-                <li class="weekly-data" id="determined-Icon5"></li>
+                <h6 class="weekly-data" id="day5">day</h6>
+                <li class="weekly-data weather-icon" id="determined-Icon5"></li>
                 <li class="weekly-data" id="determined-weather5"></li>
                 <li class="weekly-data" id="determined-temp5"></li>
                 <li class="weekly-data" id="determined-wind-speed5"></li>
               </ul>
               <ul class="col2s7 weekly-day" id="day6-data">
-                <h6 id="day6">day</h6>
-                <li class="weekly-data" id="determined-Icon6"></li>
+                <h6 class="weekly-data" id="day6">day</h6>
+                <li class="weekly-data weather-icon" id="determined-Icon6"></li>
                 <li class="weekly-data" id="determined-weather6"></li>
                 <li class="weekly-data" id="determined-temp6"></li>
                 <li class="weekly-data" id="determined-wind-speed6"></li>
               </ul>
               <ul class="col2s7 weekly-day" id="day7-data">
-                <h6 id="day7">day</h6>
-                <li class="weekly-data" id="determined-Icon7"></li>
+                <h6 class="weekly-data" id="day7">day</h6>
+                <li class="weekly-data weather-icon" id="determined-Icon7"></li>
                 <li class="weekly-data" id="determined-weather7"></li>
                 <li class="weekly-data" id="determined-temp7"></li>
                 <li class="weekly-data" id="determined-wind-speed7"></li>
