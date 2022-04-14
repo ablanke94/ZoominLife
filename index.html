@@ -62,23 +62,24 @@
             <li><button id="weekly-btn">Weekly </button></li>
           </ul>
         </div>
-        <section id="current-section" data-display="hidden">
+        <section id="current-section" data-display="visible">
           <div id="current-container">
-            <h5 class="" id="current-title">
+            <h5 id="current-title">
               Austin's Current Weather Forecast
             </h5>
             <ul class="col s7" id="current-data">
-              <li id="current-date"></li>
-              <li id="current-weather"></li>
-              <li id="current-temp"></li>
-              <li id="current-wind-speed"></li>
-              <li id="current-sunrise"></li>
-              <li id="current-sunset"></li>
+              <li class="curr-data" ><h5 id="current-date"></h5></li>
+              <li class="curr-data weather-icon" id="current-icon"></li>
+              <li class="curr-data" id="current-weather"></li>
+              <li class="curr-data" id="current-temp"></li>
+              <li class="curr-data" id="current-wind-speed"></li>
+              <li class="curr-data" id="current-sunrise"></li>
+              <li class="curr-data" id="current-sunset"></li>
             </ul>
           </div>
         </section>
 
-        <section data-display="visible" id="weekly-section-section">
+        <section data-display="hidden" id="weekly-section-section">
           <div id="weekly-section">
             <h5 id="Weekly-title">Austin's Weekly Forecast</h5>
             <ul id="weekly-display">
@@ -91,7 +92,7 @@
                 <li>Wind Speed (MPH):</li>
               </ul> -->
               <ul class="col s2 weekly-day" id="day1-data">
-                <h6 id="day1">day</h6>
+                <h6 class="weekly-data" id="day1">day</h6>
                 <li class="weekly-data" id="determined-Icon1"></li>
                 <li class="weekly-data" id="determined-weather1"></li>
                 <li class="weekly-data" id="determined-temp1"></li>

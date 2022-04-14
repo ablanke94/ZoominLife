@@ -1,12 +1,11 @@
 /* start style.css */
-body{
+body {
   background-color: #ffebbc;
 }
 .row {
   width: 96%;
   margin-left: 2%;
 }
-
 
 /* pancake navbar */
 .overlay {
@@ -16,8 +15,8 @@ body{
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
   overflow-y: hidden;
   transition: 0.5s;
 }
@@ -39,7 +38,8 @@ body{
   transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus {
+.overlay a:hover,
+.overlay a:focus {
   color: #f1f1f1;
 }
 
@@ -49,7 +49,6 @@ body{
   right: 45px;
   font-size: 60px;
 }
-
 
 /* end pancake navbar */
 
@@ -135,7 +134,7 @@ body{
 
 /* nav always at top on scroll */
 nav {
-  background-color: rgb(102,128,110);
+  background-color: rgb(102, 128, 110);
 }
 #nav-container {
   position: -webkit-sticky;
@@ -171,7 +170,8 @@ nav {
   text-align: center;
 }
 #current-section {
-  display: none;
+  display: inline-block;
+  width: 100%;
   text-align: center;
 }
 
@@ -196,36 +196,49 @@ nav {
 #current-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+#current-icon {
+  margin: 0 auto;
+  max-width: 10%;
+  padding: 0%;
   text-align: center;
 }
-
 #current-title {
   text-align: center;
   margin: 0%;
 }
-#current-data {
-  padding-top: 2%;
-  padding-left: 10%;
+#current-date {
+  border-bottom: solid 1px gray;
+  margin: 0%;
+}
+
+.curr-data {
+  display: flex;
+  justify-content: center;
 }
 #current-btn {
-  background-color: rgb(57,61,42);
-  color: rgb(175,182,157);
+  background-color: rgb(57, 61, 42);
+  color: rgb(175, 182, 157);
   border-radius: 8px;
 }
 #current-btn:hover {
-  box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24), 0 10px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.24),
+    0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 #weekly-btn {
-  background-color: rgb(57,61,42);
-  color: rgb(175,182,157);
+  background-color: rgb(57, 61, 42);
+  color: rgb(175, 182, 157);
   border-radius: 8px;
 }
 #weekly-btn:hover {
-  box-shadow: 0 5px 16px 0 rgba(0,0,0,0.24), 0 10px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.24),
+    0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 /* WEAHTER WEEKLY */
 #weekly-section-section {
-  display: inline-block;
+  display: none;
 }
 #weekly-section {
   display: flex;
@@ -245,8 +258,10 @@ nav {
 #dayKey {
   padding-right: 1%;
 }
-#weekly-data {
+.weekly-data {
+  display: flex;
   justify-content: center;
+  padding-right: 3%;
 }
 
 #day7-data {
@@ -275,12 +290,10 @@ nav {
 
 /* Purpose section css */
 #purpose-container {
-
 }
 
 #teamImg {
   float: left;
-
 }
 
 #purpose-title {
@@ -333,13 +346,12 @@ nav {
   justify-content: space-around;
 }
 
-
 /* Apparel Page */
-.shopHero{
+.shopHero {
   width: 100%;
 }
 
-#apparel-list{
+#apparel-list {
   position: fixed;
 }
 
@@ -356,7 +368,6 @@ nav {
   transition: 0.5s ease-in-out;
 }
 
-
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -372,18 +383,17 @@ nav {
 
 /* 9000px and less */
 @media screen and (max-width: 9000px) {
-    
-    /* media queries for navbar */
+  /* media queries for navbar */
 
-    .something {
-      display: block;
-    }
-    
-    .something2 {
-      display: none;
-    }
-    /* end navbar media queries */
+  .something {
+    display: block;
   }
+
+  .something2 {
+    display: none;
+  }
+  /* end navbar media queries */
+}
 
 @media screen and (max-width: 1183px) {
   #api-container {
@@ -401,52 +411,41 @@ nav {
   .something {
     display: block;
   }
-  
+
   .something2 {
     display: none;
   }
   /* end navbar media queries */
-
 }
 
 @media screen and (max-width: 992px) {
-  
   #nav-logo {
-  position: relative;
-  float: left;
-  left: 95px;
+    position: relative;
+    float: left;
+    left: 95px;
   }
-
 }
 
 @media screen and (max-width: 624px) {
-  
   .carousel .carousel-item {
     width: 225px;
     height: 225px;
     top: 50px; /* moves the images down to center */
-}
+  }
 }
 
 /* 540px and less */
 @media screen and (max-width: 540px) {
-/* around here the weekly weather starts going off screen */
+  /* around here the weekly weather starts going off screen */
 
-/* media queries for navbar */
-.something {
-  display: none;
-}
+  /* media queries for navbar */
+  .something {
+    display: none;
+  }
 
-.something2 {
-  display: block;
-  position: relative;
-  right: 15px;
-}
-
-#nav-logo {
-  position: relative;
-  float: left;
-  left: 95px;
-}
-
+  .something2 {
+    display: block;
+    position: relative;
+    right: 15px;
+  }
 }
