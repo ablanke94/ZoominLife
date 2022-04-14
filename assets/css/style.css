@@ -327,9 +327,48 @@
   #bike-trail-api {
     width: 100%;
   }
+
+  /* media queries for navbar */
+
+  .something {
+    display: block;
+  }
+  
+  .something2 {
+    display: none;
+  }
+  /* end navbar media queries */
+
 }
+
+@media screen and (max-width: 992px) {
+#nav-logo {
+  position: relative;
+  float: left;
+  left: 95px;
+}
+}
+
 
 /* 540px and less */
 @media screen and (max-width: 540px) {
 /* around here the weekly weather starts going off screen */
+
+/* media queries for navbar */
+.something {
+  display: none;
+}
+
+.something2 {
+  display: block;
+  position: relative;
+  right: 15px;
+}
+
+#nav-logo {
+  position: relative;
+  float: left;
+  left: 95px;
+}
+
 }
