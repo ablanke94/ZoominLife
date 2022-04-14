@@ -63,6 +63,7 @@ body {
 .socialRow,
 .contactListRow {
   margin: 0px;
+  margin-bottom: 15px;
   width: 100%;
 }
 
@@ -273,8 +274,7 @@ nav {
   /* position: relative; */
   border: 2px solid black;
   width: 50%;
-  padding: 1px;
-  /* background-color: white; */
+  background-color: white;
 }
 
 /* HERO section css */
@@ -289,8 +289,7 @@ nav {
 }
 
 /* Purpose section css */
-#purpose-container {
-}
+
 
 #teamImg {
   float: left;
@@ -418,11 +417,18 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
+  .brand-logo {
+    position: fixed;
+    height: 42px;
+    margin-top: 8px;
+  }
+
   #nav-logo {
     position: relative;
     float: left;
     left: 95px;
   }
+
 }
 
 @media screen and (max-width: 624px) {
