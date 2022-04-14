@@ -1,4 +1,7 @@
 /* start style.css */
+body{
+  background-color: #ffebbc;
+}
 .row {
   width: 96%;
   margin-left: 2%;
@@ -56,29 +59,6 @@
   margin-top: 12px;
 }
 
-.tee-row {
-  padding: 15px;
-}
-
-.col-md {
-  width: 24%;
-}
-
-.col-md:hover {
-  transform: scale(1.2);
-  transition: 0.5s ease-in-out;
-}
-
-.brand-logo {
-  position: fixed;
-  width: 11%;
-  margin-top: 12px;
-}
-
-.tee-row {
-  padding: 15px;
-}
-
 .weather-icon {
   max-width: 40%;
 }
@@ -89,6 +69,10 @@
 }
 
 /* nav always at top on scroll */
+nav{
+  background-color: rgb(102,128,110);
+}
+
 #nav-container {
   position: -webkit-sticky;
   position: -moz-sticky;
@@ -109,6 +93,7 @@
 #weather-api {
   border: 2px solid black;
   width: 50%;
+  background-color: rgb(248, 246, 246);
 }
 
 #weather-section {
@@ -185,6 +170,7 @@
   position: relative;
   border: 2px solid black;
   width: 50%;
+  background-color: white;
 }
 
 /* HERO section css */
@@ -256,6 +242,27 @@
   display: flex;
   justify-content: space-around;
 }
+
+/* Apparel Page */
+.shopHero{
+  width: 100%;
+}
+#apparel-list{
+  position: fixed;
+}
+.tee-row {
+  padding: 15px;
+}
+
+.col-md {
+  width: 24%;
+}
+
+.col-md:hover {
+  transform: scale(1.2);
+  transition: 0.5s ease-in-out;
+}
+
 
 /* 1183px and less */
 @media screen and (max-width: 1183px) {
