@@ -316,8 +316,8 @@
   float: left;
 }
 
-/* 1183px and less */
-@media screen and (max-width: 4000px) {
+/* 9000px and less */
+@media screen and (max-width: 9000px) {
     
     /* media queries for navbar */
 
@@ -368,8 +368,8 @@
 @media screen and (max-width: 624px) {
   
   .carousel .carousel-item {
-    min-width: 200px;
-    min-height: 200px;
+    width: 275px;
+    height: 275px;
     top: 50px; /* moves the images down to center */
 }
 }
