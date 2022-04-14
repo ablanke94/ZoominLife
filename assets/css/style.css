@@ -247,3 +247,20 @@
   justify-content: space-around;
 }
 
+/* 1183px and less */
+@media screen and (max-width: 1183px) {
+  #api-container {
+    flex-direction: column;
+  }
+  #weather-api {
+    width: 100%;
+  }
+  #bike-trail-api {
+    width: 100%;
+  }
+}
+
+/* 540px and less */
+@media screen and (max-width: 540px) {
+/* around here the weekly weather starts going off screen */
+}

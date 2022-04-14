@@ -102,7 +102,7 @@ function sevenDayData(data, currentDT) {
     // TEXT CONTENT
     let determinedIconEl = document.getElementById('determined-Icon' + i);
     assignIcon(corrWeather, determinedIconEl);
-    let determinedDate = moment.unix(currentDT).add([i], 'days').format('dddd');
+    let determinedDate = moment.unix(currentDT).add([i], 'days').format('ddd');
     let displayedDate = document.getElementById('day' + i);
     displayedDate.textContent = determinedDate;
     let determinedWeather = document.getElementById('determined-weather' + i);
