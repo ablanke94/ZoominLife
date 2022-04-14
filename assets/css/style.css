@@ -56,8 +56,12 @@
   top: 50px; /* moves the images down to center */
 }
 
-.signUpRow {
-  margin-bottom: 0px;
+.signUpRow,
+.emailRow,
+.socialRow,
+.contactListRow {
+  margin: 0px;
+  width: 100%;
 }
 
 .socialButtons {
@@ -71,13 +75,26 @@
 .socialButtons:hover {
   opacity: 0.4;
 }
-
 .contactUsList li {
   margin: 3px 0px 3px 0px;
 }
 
+.ourHoursTitle,
+.ourHoursTitle tr {
+  padding: 0;
+  height: 42px;
+}
+
+.ourHoursTitle thead {
+  height: 42px;
+}
+
+.ourHoursTitle h5 {
+  padding: 0;
+  margin-top: 8px;
+}
+
 .hoursTable {
-  margin-top: 14.5px;
   margin-bottom: 0px;
 }
 
@@ -368,8 +385,8 @@
 @media screen and (max-width: 624px) {
   
   .carousel .carousel-item {
-    width: 275px;
-    height: 275px;
+    width: 225px;
+    height: 225px;
     top: 50px; /* moves the images down to center */
 }
 }
@@ -395,13 +412,4 @@
   left: 95px;
 }
 
-}
-
-@media screen and (max-width: 624px) {
-  
-  .carousel .carousel-item {
-    min-width: 200px;
-    min-height: 200px;
-    top: 50px; /* moves the images down to center */
-}
 }
