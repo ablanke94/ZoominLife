@@ -7,6 +7,52 @@ body{
   margin-left: 2%;
 }
 
+
+/* pancake navbar */
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+
+/* end pancake navbar */
+
 .carousel .carousel-item {
   width: 400px;
   height: 400px;
@@ -68,7 +114,8 @@ body{
   flex-direction: column;
 }
 
-/* nav always at top on scroll */
+/* 
+always at top on scroll */
 nav{
   background-color: rgb(102,128,110);
 }
@@ -80,7 +127,7 @@ nav{
   position: -ms-sticky;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 998;
 }
 
 /* api container custom css */
@@ -243,13 +290,16 @@ nav{
   justify-content: space-around;
 }
 
+
 /* Apparel Page */
 .shopHero{
   width: 100%;
 }
+
 #apparel-list{
   position: fixed;
 }
+
 .tee-row {
   padding: 15px;
 }
@@ -264,6 +314,19 @@ nav{
 }
 
 
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 0;
+  width: 100%;
+}
+
+#nav-logo {
+  position: relative;
+  float: left;
+}
+
 /* 1183px and less */
 @media screen and (max-width: 1183px) {
   #api-container {
@@ -275,9 +338,48 @@ nav{
   #bike-trail-api {
     width: 100%;
   }
+
+  /* media queries for navbar */
+
+  .something {
+    display: block;
+  }
+  
+  .something2 {
+    display: none;
+  }
+  /* end navbar media queries */
+
 }
+
+@media screen and (max-width: 992px) {
+#nav-logo {
+  position: relative;
+  float: left;
+  left: 95px;
+}
+}
+
 
 /* 540px and less */
 @media screen and (max-width: 540px) {
 /* around here the weekly weather starts going off screen */
+
+/* media queries for navbar */
+.something {
+  display: none;
+}
+
+.something2 {
+  display: block;
+  position: relative;
+  right: 15px;
+}
+
+#nav-logo {
+  position: relative;
+  float: left;
+  left: 95px;
+}
+
 }
