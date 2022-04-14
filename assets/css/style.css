@@ -117,27 +117,25 @@ body {
 
 .brand-logo {
   position: fixed;
-  width: 11%;
+  width: 100%;
   margin-top: 12px;
 }
 
 .weather-icon {
-  max-width: 90%;
-  padding: 0%;
+  max-width: 100%;
 }
 
 .weekly-day {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  border-right-style: solid;
+  border-width: 2px;
 }
 
-/* 
-always at top on scroll */
+/* nav always at top on scroll */
 nav {
   background-color: rgb(102, 128, 110);
 }
-
 #nav-container {
   position: -webkit-sticky;
   position: -moz-sticky;
@@ -158,6 +156,8 @@ nav {
 #weather-api {
   border: 2px solid black;
   width: 50%;
+  text-align: center;
+  /* background-color: rgb(175,182,157); */
   background-color: rgb(248, 246, 246);
 }
 
@@ -172,6 +172,7 @@ nav {
 #current-section {
   display: inline-block;
   width: 100%;
+  text-align: center;
 }
 
 #weather-header-section {
@@ -202,6 +203,7 @@ nav {
   margin: 0 auto;
   max-width: 10%;
   padding: 0%;
+  text-align: center;
 }
 #current-title {
   text-align: center;
@@ -215,6 +217,24 @@ nav {
 .curr-data {
   display: flex;
   justify-content: center;
+}
+#current-btn {
+  background-color: rgb(57, 61, 42);
+  color: rgb(175, 182, 157);
+  border-radius: 8px;
+}
+#current-btn:hover {
+  box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.24),
+    0 10px 50px 0 rgba(0, 0, 0, 0.19);
+}
+#weekly-btn {
+  background-color: rgb(57, 61, 42);
+  color: rgb(175, 182, 157);
+  border-radius: 8px;
+}
+#weekly-btn:hover {
+  box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.24),
+    0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
 /* WEAHTER WEEKLY */
 #weekly-section-section {
@@ -244,12 +264,17 @@ nav {
   padding-right: 3%;
 }
 
+#day7-data {
+  border-right: none;
+}
+
 /* BIKE trail */
 #bike-trail-api {
-  position: relative;
+  /* position: relative; */
   border: 2px solid black;
   width: 50%;
-  background-color: white;
+  padding: 1px;
+  /* background-color: white; */
 }
 
 /* HERO section css */
@@ -265,7 +290,6 @@ nav {
 
 /* Purpose section css */
 #purpose-container {
-  border: 0px solid black;
 }
 
 #teamImg {
@@ -359,18 +383,17 @@ nav {
 
 /* 9000px and less */
 @media screen and (max-width: 9000px) {
-    
-    /* media queries for navbar */
+  /* media queries for navbar */
 
-    .something {
-      display: block;
-    }
-    
-    .something2 {
-      display: none;
-    }
-    /* end navbar media queries */
+  .something {
+    display: block;
   }
+
+  .something2 {
+    display: none;
+  }
+  /* end navbar media queries */
+}
 
 @media screen and (max-width: 1183px) {
   #api-container {
@@ -396,30 +419,19 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
-<<<<<<< HEAD
   #nav-logo {
     position: relative;
     float: left;
     left: 95px;
   }
-=======
-  
-  #nav-logo {
-  position: relative;
-  float: left;
-  left: 95px;
-  }
-
 }
 
 @media screen and (max-width: 624px) {
-  
   .carousel .carousel-item {
     width: 225px;
     height: 225px;
     top: 50px; /* moves the images down to center */
-}
->>>>>>> c1978e3b1783701e93a8e83792b54b8ea6ede04f
+  }
 }
 
 /* 540px and less */
@@ -436,14 +448,4 @@ nav {
     position: relative;
     right: 15px;
   }
-
-<<<<<<< HEAD
-  #nav-logo {
-    position: relative;
-    float: left;
-    left: 95px;
-  }
 }
-=======
-}
->>>>>>> c1978e3b1783701e93a8e83792b54b8ea6ede04f
