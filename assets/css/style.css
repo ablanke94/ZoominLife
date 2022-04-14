@@ -317,6 +317,20 @@
 }
 
 /* 1183px and less */
+@media screen and (max-width: 4000px) {
+    
+    /* media queries for navbar */
+
+    .something {
+      display: block;
+    }
+    
+    .something2 {
+      display: none;
+    }
+    /* end navbar media queries */
+  }
+
 @media screen and (max-width: 1183px) {
   #api-container {
     flex-direction: column;
