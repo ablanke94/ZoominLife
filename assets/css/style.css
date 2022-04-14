@@ -342,13 +342,23 @@
 }
 
 @media screen and (max-width: 992px) {
-#nav-logo {
+  
+  #nav-logo {
   position: relative;
   float: left;
   left: 95px;
-}
+  }
+
 }
 
+@media screen and (max-width: 624px) {
+  
+  .carousel .carousel-item {
+    min-width: 200px;
+    min-height: 200px;
+    top: 50px; /* moves the images down to center */
+}
+}
 
 /* 540px and less */
 @media screen and (max-width: 540px) {
