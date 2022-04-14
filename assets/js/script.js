@@ -3,12 +3,16 @@ var city = 'Austin';
 var key = '7e0d1756ab93961fb340fd9cdc867eda';
 var weatherBtn = document.querySelector('.dropdown-trigger');
 // weather API variables
+let currentWeatherData = document.getElementById('current-section');
+let weeklyWeatherData = document.getElementById('weekly-section-section');
 var currTemp = document.getElementById('current-temp');
 var currWeather = document.getElementById('current-weather');
 var currWindSpeed = document.getElementById('current-wind-speed');
 var currSunrise = document.getElementById('current-sunrise');
 var currSunset = document.getElementById('current-sunset');
 var currDate = document.getElementById('current-date');
+var currentBtn = document.getElementById('current-btn');
+var weeklyBtn = document.getElementById('weekly-btn');
 
 // function DECLARATIONS
 // Weather API functions (LAT, LON)
@@ -102,7 +106,11 @@ function sevenDayData(data, currentDT) {
     // TEXT CONTENT
     let determinedIconEl = document.getElementById('determined-Icon' + i);
     assignIcon(corrWeather, determinedIconEl);
-    let determinedDate = moment.unix(currentDT).add([i], 'days').format('dddd');
+    let determinedDate = moment
+      .unix(currentDT)
+      .add([i], 'days')
+      .format('dddd')
+      .slice(0, 3);
     let displayedDate = document.getElementById('day' + i);
     displayedDate.textContent = determinedDate;
     let determinedWeather = document.getElementById('determined-weather' + i);
@@ -110,9 +118,9 @@ function sevenDayData(data, currentDT) {
     console.log(determinedWeather);
     determinedWeather.textContent = corrWeather;
     let determinedTemp = document.getElementById('determined-temp' + i);
-    determinedTemp.textContent = corrTemp;
+    determinedTemp.textContent = Math.round(corrTemp);
     let determinedWind = document.getElementById('determined-wind-speed' + i);
-    determinedWind.textContent = corrWind;
+    determinedWind.textContent = Math.round(corrWind);
   }
 }
 
@@ -160,13 +168,49 @@ function assignIcon(dailyId, block) {
 
 // End of weather API's
 
+// function SET-Attributes
+function setAttributes(element, attributes) {
+  Object.keys(attributes).forEach((attr) => {
+    element.setAttribute(attr, attributes[attr]);
+  });
+}
+
+let hiddenAttributes = {
+  'data-display': 'hidden',
+  style: 'display: none',
+};
+let visibleAttributes = {
+  'data-display': 'visible',
+  style: 'display: inline-block',
+};
+
+// weather display Buttons click Functionality
+function currentBtnClick(e) {
+  if (currentWeatherData.getAttribute('data-display') === 'hidden') {
+    console.log('works');
+    setAttributes(weeklyWeatherData, hiddenAttributes);
+    setAttributes(currentWeatherData, visibleAttributes);
+  }
+}
+function weeklyBtnClick(e) {
+  if (weeklyWeatherData.getAttribute('data-display') === 'hidden') {
+    console.log('works');
+    setAttributes(currentWeatherData, hiddenAttributes);
+    setAttributes(weeklyWeatherData, visibleAttributes);
+  }
+}
+// function declaration END
+
+//  Weather display button functionality Declaration
+currentBtn.addEventListener('click', currentBtnClick);
+weeklyBtn.addEventListener('click', weeklyBtnClick);
+
 // Carousel
 document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.carousel');
   M.Carousel.init(elems);
 });
 
-// function declaration END
 weatherApi();
 
 // save email to local storage
