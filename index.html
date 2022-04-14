@@ -21,20 +21,37 @@
   </head>
 
   <body>
-    <section id="nav-container">
-      <nav id="navbar">
-        <div class="nav-wrapper">
+    <header class="" id="nav-container">
+      <nav class="" id="navbar">
+        <div id="nav-logo">
           <a href="./index.html">
             <img class="brand-logo" src="assets/images/ZOOMING.png" />
           </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+        </div>
+          <!-- for spacing purposes only -->
+        <!-- <div class=""></div> --> 
+        <div class="navbar-links">
+          <ul > <!-- class="right hide-on-med-and-down" id="nav-mobile" -->
+            <li class="something"><a href="#">Sass</a></li>
+            <li class="something"><a href="#">Components</a></li>
+            <li class="something"><a href="#">JavaScript</a></li>
+            <li class="something2">
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </li>
           </ul>
         </div>
+        <div id="pancake" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">Sass</a>
+            <a href="#">Components</a>
+            <a href="#">JavaScript</a>
+          </div>
+        </div>
+        
+        </div>
       </nav>
-    </section>
+    </header>
     <section id="api-container">
       <div id="weather-api">
         <div class="row" id="weather-nav">
@@ -137,9 +154,9 @@
           data-maptype="trailforks"
           data-trailstyle="status"
           data-controls="1"
-          data-list="1"
+          data-list="0"
           data-dml="1"
-          data-layers="labels,region"
+          data-layers="trail,labels,poi,polygon,directory,region"
           data-z=""
           data-lat=""
           data-lon=""
