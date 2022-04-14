@@ -70,9 +70,9 @@
 }
 
 .brand-logo {
-  position: fixed;
-  width: 11%;
-  margin-top: 12px;
+  width: auto;
+  max-height: 40px;
+  margin-top: 10px;
 }
 
 .tee-row {
@@ -247,3 +247,16 @@
   justify-content: space-around;
 }
 
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin: 0;
+  width: 100%;
+}
+
+#nav-logo {
+  position: relative;
+  float: left;
+  left: 85px;
+}
