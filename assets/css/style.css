@@ -80,12 +80,14 @@
 }
 
 .weather-icon {
-  max-width: 40%;
+  max-width: 100%;
 }
 
 .weekly-day {
   display: flex;
   flex-direction: column;
+  border-right-style: solid;
+  border-width: 2px;
 }
 
 /* nav always at top on scroll */
@@ -109,6 +111,7 @@
 #weather-api {
   border: 2px solid black;
   width: 50%;
+  text-align: center;
 }
 
 #weather-section {
@@ -121,6 +124,7 @@
 }
 #current-section {
   display: none;
+  text-align: center;
 }
 
 #weather-header-section {
@@ -144,6 +148,7 @@
 #current-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 #current-title {
@@ -178,6 +183,10 @@
 }
 #weekly-data {
   justify-content: center;
+}
+
+#day7-data {
+  border-right: none;
 }
 
 /* BIKE trail */
