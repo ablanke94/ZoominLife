@@ -382,3 +382,12 @@
 }
 
 }
+
+@media screen and (max-width: 624px) {
+  
+  .carousel .carousel-item {
+    min-width: 200px;
+    min-height: 200px;
+    top: 50px; /* moves the images down to center */
+}
+}
