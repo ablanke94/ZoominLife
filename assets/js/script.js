@@ -186,3 +186,13 @@ script.setAttribute(
 );
 document.getElementsByTagName('head')[0].appendChild(script);
 var widgetCheck = false;
+
+// pancake navbar functions 
+function openNav() {
+  document.getElementById("pancake").style.height = "100%";
+}
+
+function closeNav() {
+  document.getElementById("pancake").style.height = "0%";
+}
+// end pancake navbar functions

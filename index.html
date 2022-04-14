@@ -30,12 +30,25 @@
         </div>
           <!-- for spacing purposes only -->
         <!-- <div class=""></div> --> 
-        <div class="">
+        <div class="navbar-links">
           <ul > <!-- class="right hide-on-med-and-down" id="nav-mobile" -->
-            <li><a href="#">Sass</a></li>
-            <li><a href="#">Components</a></li>
-            <li><a href="#">JavaScript</a></li>
+            <li class="something"><a href="#">Sass</a></li>
+            <li class="something"><a href="#">Components</a></li>
+            <li class="something"><a href="#">JavaScript</a></li>
+            <li class="something2">
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </li>
           </ul>
+        </div>
+        <div id="pancake" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">Sass</a>
+            <a href="#">Components</a>
+            <a href="#">JavaScript</a>
+          </div>
+        </div>
+        
         </div>
       </nav>
     </header>
