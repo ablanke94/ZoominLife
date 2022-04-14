@@ -21,20 +21,37 @@
   </head>
 
   <body>
-    <section id="nav-container">
-      <nav id="navbar">
-        <div class="nav-wrapper">
+    <header class="" id="nav-container">
+      <nav class="" id="navbar">
+        <div id="nav-logo">
           <a href="./index.html">
             <img class="brand-logo" src="assets/images/ZOOMING.png" />
           </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+        </div>
+          <!-- for spacing purposes only -->
+        <!-- <div class=""></div> --> 
+        <div class="navbar-links">
+          <ul > <!-- class="right hide-on-med-and-down" id="nav-mobile" -->
+            <li class="something"><a href="#">Sass</a></li>
+            <li class="something"><a href="#">Components</a></li>
+            <li class="something"><a href="#">JavaScript</a></li>
+            <li class="something2">
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+            </li>
           </ul>
         </div>
+        <div id="pancake" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <div class="overlay-content">
+            <a href="#">Sass</a>
+            <a href="#">Components</a>
+            <a href="#">JavaScript</a>
+          </div>
+        </div>
+        
+        </div>
       </nav>
-    </section>
+    </header>
     <section id="api-container">
       <div id="weather-api">
         <div class="row" id="weather-nav">
@@ -65,51 +82,52 @@
           <div id="weekly-section">
             <h5 id="Weekly-title">Austin's Weekly Forecast</h5>
             <ul id="weekly-display">
-              <ul class="col s7 weekly-day" id="day1-data">
+
+              <ul class="col s2 weekly-day" id="day1-data">
                 <h6 class="weekly-data" id="day1">day</h6>
-                <li class="weekly-data weather-icon" id="determined-Icon1"></li>
+                <li class="weekly-data" id="determined-Icon1"></li>
                 <li class="weekly-data" id="determined-weather1"></li>
                 <li class="weekly-data" id="determined-temp1"></li>
                 <li class="weekly-data" id="determined-wind-speed1"></li>
               </ul>
-              <ul class="col s7 weekly-day" id="day2-data">
-                <h6 class="weekly-data"id="day2">day</h6>
-                <li class="weekly-data weather-icon" id="determined-Icon2"></li>
+              <ul class="col s2 weekly-day" id="day2-data">
+                <h6 id="day2">day</h6>
+                <li class="weekly-data" id="determined-Icon2"></li>
                 <li class="weekly-data" id="determined-weather2"></li>
                 <li class="weekly-data" id="determined-temp2"></li>
                 <li class="weekly-data" id="determined-wind-speed2"></li>
               </ul>
-              <ul class="col2s7 weekly-day" id="day3-data">
-                <h6 class="weekly-data" id="day3">day</h6>
-                <li class="weekly-data weather-icon" id="determined-Icon3"></li>
+              <ul class="col s2 weekly-day" id="day3-data">
+                <h6 id="day3">day</h6>
+                <li class="weekly-data" id="determined-Icon3"></li>
                 <li class="weekly-data" id="determined-weather3"></li>
                 <li class="weekly-data" id="determined-temp3"></li>
                 <li class="weekly-data" id="determined-wind-speed3"></li>
               </ul>
-              <ul class="col2s7 weekly-day" id="day4-data">
-                <h6 class="weekly-data" id="day4">day</h6>
-                <li class="weekly-data weather-icon" id="determined-Icon4"></li>
+              <ul class="col s2 weekly-day" id="day4-data">
+                <h6 id="day4">day</h6>
+                <li class="weekly-data" id="determined-Icon4"></li>
                 <li class="weekly-data" id="determined-weather4"></li>
                 <li class="weekly-data" id="determined-temp4"></li>
                 <li class="weekly-data" id="determined-wind-speed4"></li>
               </ul>
-              <ul class="col2s7 weekly-day" id="day5-data">
-                <h6 class="weekly-data" id="day5">day</h6>
-                <li class="weekly-data weather-icon" id="determined-Icon5"></li>
+              <ul class="col s2 weekly-day" id="day5-data">
+                <h6 id="day5">day</h6>
+                <li class="weekly-data" id="determined-Icon5"></li>
                 <li class="weekly-data" id="determined-weather5"></li>
                 <li class="weekly-data" id="determined-temp5"></li>
                 <li class="weekly-data" id="determined-wind-speed5"></li>
               </ul>
-              <ul class="col2s7 weekly-day" id="day6-data">
-                <h6 class="weekly-data" id="day6">day</h6>
-                <li class="weekly-data weather-icon" id="determined-Icon6"></li>
+              <ul class="col s2 weekly-day" id="day6-data">
+                <h6 id="day6">day</h6>
+                <li class="weekly-data" id="determined-Icon6"></li>
                 <li class="weekly-data" id="determined-weather6"></li>
                 <li class="weekly-data" id="determined-temp6"></li>
                 <li class="weekly-data" id="determined-wind-speed6"></li>
               </ul>
-              <ul class="col2s7 weekly-day" id="day7-data">
-                <h6 class="weekly-data" id="day7">day</h6>
-                <li class="weekly-data weather-icon" id="determined-Icon7"></li>
+              <ul class="col s2 weekly-day" id="day7-data">
+                <h6 id="day7">day</h6>
+                <li class="weekly-data" id="determined-Icon7"></li>
                 <li class="weekly-data" id="determined-weather7"></li>
                 <li class="weekly-data" id="determined-temp7"></li>
                 <li class="weekly-data" id="determined-wind-speed7"></li>
@@ -123,16 +141,16 @@
       <div id="bike-trail-api">
         <div
           class="TrailforksWidgetMap"
-          data-w="100%""
-          data-h="300px"
+          data-w="100%"
+          data-h="350px"
           data-rid="3704"
           data-activitytype="1"
           data-maptype="trailforks"
           data-trailstyle="status"
           data-controls="1"
-          data-list="1"
+          data-list="0"
           data-dml="1"
-          data-layers="labels,region"
+          data-layers="trail,labels,poi,polygon,directory,region"
           data-z=""
           data-lat=""
           data-lon=""
@@ -150,7 +168,7 @@
           <a class="carousel-item" href="#four!"><img src="./assets/images/Shirt Mock4.png"></a>
         </div>
         <div class="center-align" id="button-div">
-          <button class=center-align" id="heroShopButton">Shop Now</button>
+          <button class="center-align" id="heroShopButton">Shop Now</button>
       </div>
       </div>
     </section>
@@ -316,7 +334,7 @@
           <a href="#">Sale</a>
         </li>
         <li>
-          <a href="#">Apparel</a>
+          <a href="./apparel.html">Apparel</a>
         </li>
       </ul>
     </div>
