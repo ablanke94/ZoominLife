@@ -38,12 +38,13 @@
     <section id="api-container">
       <div id="weather-api">
         <div class="row" id="weather-nav">
+          <h5 id="weather-api-title">Weather Forecast</h5>
           <ul id="weather-nav-list" class="">
-            <li><button>Components</button></li>
-            <li><button>JavaScript</button></li>
+            <li><button id="current-btn">Today</button></li>
+            <li><button id="weekly-btn">Weekly </button></li>
           </ul>
         </div>
-        <section id="current-section">
+        <section id="current-section" data-display="hidden">
           <div id="current-container">
             <h5 class="" id="current-title">
               Austin's Current Weather Forecast
@@ -59,16 +60,17 @@
           </div>
         </section>
 
-        <section id="weekly-section">
+        <section data-display="visible" id="weekly-section-section">
           <div id="weekly-section">
-            <h5 id="Weekly-title">Austin's 7 Day Weather Forecast</h5>
+            <h5 id="Weekly-title">Austin's Weekly Forecast</h5>
             <ul id="weekly-display">
               <ul class="col s7" id="dayKey">
                 <h6>Day:</h6>
-                <li>Icon:</li>
+                <br>
+                <br>
                 <li>Weather</li>
                 <li>Temperature:</li>
-                <li>Wind Speed:</li>
+                <li>Wind Speed (MPH):</li>
               </ul>
               <ul class="col s7 weekly-day" id="day1-data">
                 <h6 id="day1">day</h6>
@@ -120,7 +122,7 @@
                 <li class="weekly-data" id="determined-wind-speed7"></li>
               </ul>
             </ul>
-            2
+            
           </div>
         </section>
         <!-- Dropdown Trigger -->
