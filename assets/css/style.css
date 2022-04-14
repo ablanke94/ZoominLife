@@ -59,8 +59,12 @@ body{
   top: 50px; /* moves the images down to center */
 }
 
-.signUpRow {
-  margin-bottom: 0px;
+.signUpRow,
+.emailRow,
+.socialRow,
+.contactListRow {
+  margin: 0px;
+  width: 100%;
 }
 
 .socialButtons {
@@ -74,13 +78,26 @@ body{
 .socialButtons:hover {
   opacity: 0.4;
 }
-
 .contactUsList li {
   margin: 3px 0px 3px 0px;
 }
 
+.ourHoursTitle,
+.ourHoursTitle tr {
+  padding: 0;
+  height: 42px;
+}
+
+.ourHoursTitle thead {
+  height: 42px;
+}
+
+.ourHoursTitle h5 {
+  padding: 0;
+  margin-top: 8px;
+}
+
 .hoursTable {
-  margin-top: 14.5px;
   margin-bottom: 0px;
 }
 
@@ -327,7 +344,21 @@ nav{
   float: left;
 }
 
-/* 1183px and less */
+/* 9000px and less */
+@media screen and (max-width: 9000px) {
+    
+    /* media queries for navbar */
+
+    .something {
+      display: block;
+    }
+    
+    .something2 {
+      display: none;
+    }
+    /* end navbar media queries */
+  }
+
 @media screen and (max-width: 1183px) {
   #api-container {
     flex-direction: column;
@@ -353,13 +384,23 @@ nav{
 }
 
 @media screen and (max-width: 992px) {
-#nav-logo {
+  
+  #nav-logo {
   position: relative;
   float: left;
   left: 95px;
-}
+  }
+
 }
 
+@media screen and (max-width: 624px) {
+  
+  .carousel .carousel-item {
+    width: 225px;
+    height: 225px;
+    top: 50px; /* moves the images down to center */
+}
+}
 
 /* 540px and less */
 @media screen and (max-width: 540px) {
