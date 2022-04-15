@@ -373,20 +373,20 @@ nav {
 }
 
 #heroShopButton {
-  background-color: black;
+  background-color: var(--green);
   color: white;
   font-size: 24px;
   transition: 0.4s;
   padding: 5px 20px;
   cursor: pointer;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(57, 61, 42, 0.2), 0 6px 20px 0 rgba(57, 61, 42, 0.19);
 }
 
 #heroShopButton:hover {
-  background-color: grey;
+  background-color: var(--dark);
   color: white;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(57, 61, 42, 0.24),
+    0 17px 50px 0 rgba(57, 61, 42, 0.19);
 }
 
 #socialMediaButtons {
