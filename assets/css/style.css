@@ -91,6 +91,7 @@ hr {
 .emailRow,
 .socialRow,
 .contactListRow {
+  justify-content: center;
   margin: 0px;
   margin-bottom: 15px;
   width: 100%;
@@ -282,9 +283,10 @@ nav {
 }
 
 #current-btn {
-  background-color: rgb(57, 61, 42);
-  color: rgb(175, 182, 157);
+  background-color: rgb(255, 230, 3);
+  color: rgb(32, 32, 32);
   border-radius: 8px;
+  padding: 12% 15% 12% 15%;
 }
 
 #current-btn:hover {
@@ -296,6 +298,7 @@ nav {
   background-color: rgb(57, 61, 42);
   color: rgb(175, 182, 157);
   border-radius: 8px;
+  padding: 11% 11% 11% 11%;
 }
 
 #weekly-btn:hover {
@@ -405,6 +408,7 @@ nav {
   width: 100%;
 }
 #purpose-title {
+  padding-top: 3%;
   text-align: center;
 }
 
@@ -415,14 +419,20 @@ nav {
 
 /* SIGN UP section css */
 #sign-up-container {
+  display: flex;
+  flex-direction: column;
   /* margin: 0%; */
   border-bottom: 0px solid black;
+  justify-content: center;
   /*  height: 25vh; */
 }
-
+#sign-up-title {
+  text-align: center;
+}
 /* Contact Us section css */
 #contact-us-container {
   border: 0px solid black;
+  margin-bottom: 0%;
   /*  height: 25vh; */
 }
 
@@ -485,7 +495,15 @@ nav {
   transform: scale(1.2);
   transition: 0.5s ease-in-out;
 }
-
+#email-form {
+  display: flex;
+  margin: 0;
+  /* justify-content: center; */
+}
+#form-for-email {
+  margin: 0%;
+  padding-bottom: 3%;
+}
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -501,6 +519,7 @@ nav {
 #signUpBtn {
   background-color: var(--green);
   color: white;
+  margin: 0;
 }
 
 #signUpBtn:hover {
@@ -590,6 +609,23 @@ nav {
     width: 225px;
     height: 225px;
     top: 50px; /* moves the images down to center */
+  }
+  #weather-nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .weekly-day {
+    display: flex;
+    padding-right: 0.5%;
+    flex-direction: column;
+    border-right-style: solid;
+    border-width: 2px;
+  }
+  #sign-up-title {
+    text-align: center;
   }
 }
 
