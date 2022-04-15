@@ -354,10 +354,21 @@ nav {
 
 /* Quote section css */
 
+#quote-section-container {
+  background-image: url("../images/bike-trail.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #393d2a;
+  height: 350px;
+}
+
 #quote-container {
   display: flex;
   flex-direction: column;
   width: 30%;
+  align-items: right;
+  color: white;
+  position: relative;
 }
 
 #bike-quote {
@@ -599,5 +610,9 @@ nav {
 
   .hideMobile {
     display: none; /* hides these 2 divs on small/mobile screens to keep icons centered */
+  }
+
+  #quote-container {
+    width: 100%;
   }
 }
