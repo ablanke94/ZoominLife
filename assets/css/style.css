@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #ffebbc;
+  background-color: var(--bgColor);
   font-family: 'Lato', sans-serif; /* a little easier on the eyes // change font here */
 }
 .row {
@@ -85,6 +85,18 @@ body {
 .contactUsList {
   justify-content: center;
   text-align: center;
+}
+
+.shopLinks a,
+.supportLinks a,
+.contactUsList a {
+  color: var(--green)
+}
+
+.shopLinks a:hover,
+.supportLinks a:hover,
+.contactUsList a:hover {
+  color: var(--dark)
 }
 
 .socialButtons {
