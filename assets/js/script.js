@@ -23,7 +23,7 @@ console.log(currIcon);
 // Weather API functions (LAT, LON)
 function weatherApi() {
   var apiUrl =
-    'http://api.openweathermap.org/geo/1.0/direct?q=' +
+    'https://api.openweathermap.org/geo/1.0/direct?q=' +
     city +
     '&limit=5&units=imperial&appid=' +
     key;
@@ -238,7 +238,7 @@ function weeklyBtnClick(e) {
 // function declaration END
 
 // Shop modal
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   var elems = document.querySelectorAll('.modal');
   M.Modal.init(elems);
 });
