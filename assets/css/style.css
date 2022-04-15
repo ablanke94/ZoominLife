@@ -12,6 +12,25 @@ body {
   color: var(--dark); /* page font color */
   font-family: 'Lato', sans-serif; /* a little easier on the eyes // change font here */
 }
+
+hr {
+  display: block;
+  position: relative;
+  width: 75%;
+  font-size: 1px;
+  line-height: 0;
+  border-top: 1px dotted var(--green);
+  border-bottom: 1px dotted var(--green);
+}
+
+.longHr {
+  width: 100%;
+  font-size: 1px;
+  line-height: 0;
+  border-top: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
+}
+
 .row {
   width: 96%;
   margin-left: 2%;
@@ -335,6 +354,38 @@ nav {
   background-color: white;
 }
 
+
+/* Quote section css */
+
+#quote-section-container {
+  background-image: url("../images/bike-trail.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #393d2a;
+  height: 350px;
+}
+
+#quote-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  align-items: right;
+  color: white;
+  position: relative;
+}
+
+#bike-quote {
+  text-align: center;
+  font-size: 20px;
+}
+
+#quote-author {
+  font-style: italic;
+  text-align: right;
+  font-size: 12px;
+  padding-right: 50px;
+}
+
 /* HERO section css */
 #hero-container {
   border: 0px solid black;
@@ -361,6 +412,11 @@ nav {
   text-align: center;
 }
 
+#purpose-content {
+  font-size: 20px;
+}
+
+
 /* SIGN UP section css */
 #sign-up-container {
   display: flex;
@@ -383,7 +439,6 @@ nav {
 /* Footer section css */
 #footer-container {
   border: 0px solid black;
-  /*  height: 25vh; */
 }
 
 /* shop button move up */
@@ -591,5 +646,9 @@ nav {
 
   .hideMobile {
     display: none; /* hides these 2 divs on small/mobile screens to keep icons centered */
+  }
+
+  #quote-container {
+    width: 100%;
   }
 }
