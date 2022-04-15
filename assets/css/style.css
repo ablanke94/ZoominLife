@@ -52,6 +52,13 @@ hr {
   transition: 0.5s;
 }
 
+.visible {
+  display: inline-block;
+}
+.hidden {
+  display: none;
+}
+
 .overlay-content {
   position: relative;
   top: 25%;
@@ -356,11 +363,10 @@ nav {
   background-color: white;
 }
 
-
 /* Quote section css */
 
 #quote-section-container {
-  background-image: url("../images/bike-trail.png");
+  background-image: url('../images/bike-trail.png');
   background-repeat: no-repeat;
   background-position: center;
   background-color: #393d2a;
@@ -411,7 +417,6 @@ nav {
   background-color: #afb69d79;
   width: 100%;
   border-top: dotted 2px var(--dark);
-  
 }
 #purpose-title {
   padding-top: 3%;
@@ -421,7 +426,6 @@ nav {
 #purpose-content {
   font-size: 20px;
 }
-
 
 /* SIGN UP section css */
 #sign-up-container {
