@@ -24,7 +24,9 @@ hr {
 }
 
 .longHr {
-  width: 100%;
+  position: relative;
+  top: 1px;
+  width: 99.8%;
   font-size: 1px;
   line-height: 0;
   border-top: 1px solid var(--green);
@@ -373,6 +375,7 @@ nav {
   align-items: right;
   color: white;
   position: relative;
+  left: 40px;
 }
 
 #bike-quote {
@@ -407,6 +410,8 @@ nav {
   margin: 0%;
   background-color: #afb69d79;
   width: 100%;
+  border-top: dotted 2px var(--dark);
+  
 }
 #purpose-title {
   padding-top: 3%;
@@ -610,11 +615,11 @@ nav {
 }
 
 @media screen and (max-width: 624px) {
-  .carousel .carousel-item {
+  /* .carousel .carousel-item {
     width: 225px;
     height: 225px;
-    top: 50px; /* moves the images down to center */
-  }
+    top: 25px; /* moves the images down to center */ /*
+  } */
   #weather-nav-list {
     display: flex;
     flex-direction: row;
@@ -655,5 +660,22 @@ nav {
 
   #quote-container {
     width: 100%;
+  }
+
+  #quote-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: right;
+    color: white;
+    position: relative;
+    left: 0px;
+  }
+
+  #quote-author {
+    font-style: italic;
+    text-align: right;
+    font-size: 12px;
+    padding-right: 30px;
   }
 }
