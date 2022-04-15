@@ -363,6 +363,7 @@ nav {
   background-position: center;
   background-color: #393d2a;
   height: 350px;
+  background-size: cover;
 }
 
 #quote-container {
@@ -481,6 +482,10 @@ nav {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
+}
+
+#shirtTitle {
+  text-align: center;
 }
 
 /* .tee-row {
