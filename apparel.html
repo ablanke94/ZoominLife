@@ -39,9 +39,10 @@
           <!-- <div class=""></div> --> 
           <div class="navbar-links">
             <ul > <!-- class="right hide-on-med-and-down" id="nav-mobile" -->
-              <li class="something"><a href="#sign-up-container">Newsletter</a></li>
+              <li class="something"><a href="./index.html">Home</a></li>
               <li class="something"><a href="./apparel.html">Shop</a></li>
-              <li class="something"><a href="#footer-container">Contact Us</a></li>
+              <li class="something"><a href="./index.html#contact-us-container
+                ">Contact Us</a></li>
               <li class="something2">
                 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
               </li>
@@ -70,19 +71,42 @@
       
 <!--Section for Tees-->
         <section class="row center-align" id="apparel-list">
-            <div class="col s12 m6 l3">             
+            <div class="col s12 m6 l3">
+              <a class="modal-trigger" href="#modal1">
                 <img class="apparelImg" src="./assets/images/Shirt Mock1.png" alt="browntee">
+              </a>
             </div>
             <div class="col s12 m6 l3">
+              <a class="modal-trigger" href="#modal1">
                 <img class="apparelImg" src="./assets/images/Shirt Mock2.png" alt="tantee">
+              </a>
             </div>
             <div class="col s12 m6 l3">
+              <a class="modal-trigger" href="#modal1">
                 <img class="apparelImg" src="./assets/images/Shirt Mock3.png" alt="greentee">
+              </a>
             </div>
             <div class="col s12 m6 l3">
+              <a class="modal-trigger" href="#modal1">
                 <img class="apparelImg" src="./assets/images/Shirt Mock4.png" alt="whitetee">
+              </a>
             </div>
         </section>
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+          <h4>Thank you for your donation!</h4>
+          <p>Your support means the world to us, and we want to show it! Your selected shirt will be shipped to you
+            promptly, and you will be recieving an email in the next 7-30 business days with shipping information!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a href="./index.html" class="modal-close waves-effect waves-green btn-flat">Return to homepage</a>
+        </div>
+      </div>
+
+
         
         <div class="row "></div> <!--for spacing-->
         <div class="row"></div>  <!--for spacing-->
@@ -141,20 +165,6 @@
             </div>
             <div></div>
           </section>
-
-      <!-- Modal Trigger -->
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-      <!-- Modal Structure -->
-      <div id="modal1" class="modal modal-fixed-footer">
-        <div class="modal-content">
-          <h4>Modal Header</h4>
-          <p>A bunch of text</p>
-        </div>
-        <div class="modal-footer">
-          <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-        </div>
-      </div>
 
 
     <script type="text/javascript" src="./assets/materialize/js/materialize.js"></script>
