@@ -14,6 +14,8 @@ var currDate = document.getElementById('current-date');
 var currIcon = document.getElementById('current-icon');
 var currentBtn = document.getElementById('current-btn');
 var weeklyBtn = document.getElementById('weekly-btn');
+var currTitle = document.getElementById('current-title');
+var weeklyTitle = document.getElementById('Weekly-title');
 console.log(currIcon);
 
 // function DECLARATIONS
@@ -210,6 +212,8 @@ function currentBtnClick(e) {
     console.log('works');
     setAttributes(weeklyWeatherData, hiddenAttributes);
     setAttributes(currentWeatherData, visibleAttributes);
+    setAttributes(weeklyTitle, hiddenAttributes);
+    setAttributes(currTitle, visibleAttributes);
   }
 }
 function weeklyBtnClick(e) {
@@ -217,6 +221,8 @@ function weeklyBtnClick(e) {
     console.log('works');
     setAttributes(currentWeatherData, hiddenAttributes);
     setAttributes(weeklyWeatherData, visibleAttributes);
+    setAttributes(currTitle, hiddenAttributes);
+    setAttributes(weeklyTitle, visibleAttributes);
   }
 }
 // function declaration END
@@ -251,12 +257,12 @@ script.setAttribute(
 document.getElementsByTagName('head')[0].appendChild(script);
 var widgetCheck = false;
 
-// pancake navbar functions 
+// pancake navbar functions
 function openNav() {
-  document.getElementById("pancake").style.height = "100%";
+  document.getElementById('pancake').style.height = '100%';
 }
 
 function closeNav() {
-  document.getElementById("pancake").style.height = "0%";
+  document.getElementById('pancake').style.height = '0%';
 }
 // end pancake navbar functions
