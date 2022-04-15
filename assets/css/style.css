@@ -1,6 +1,16 @@
 /* start style.css */
+:root {
+  --green: #66806E;
+  --light: #FDDE8A;
+  --lightGreen: #AFB69D;
+  --dark: #393D2A;
+  --bgColor: #ffebbc;
+}
+
 body {
-  background-color: #ffebbc;
+  background-color: var(--bgColor);
+  color: var(--dark); /* page font color */
+  font-family: 'Lato', sans-serif; /* a little easier on the eyes // change font here */
 }
 .row {
   width: 96%;
@@ -45,8 +55,8 @@ body {
 
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
+  top: 5px;
+  right: 5px;
   font-size: 60px;
 }
 
@@ -63,12 +73,32 @@ body {
 .socialRow,
 .contactListRow {
   margin: 0px;
+  margin-bottom: 15px;
   width: 100%;
 }
 
+.shopLinks,
+.supportLinks,
+.contactUsList {
+  justify-content: center;
+  text-align: center;
+}
+
+.shopLinks a,
+.supportLinks a,
+.contactUsList a {
+  color: var(--green)
+}
+
+.shopLinks a:hover,
+.supportLinks a:hover,
+.contactUsList a:hover {
+  color: var(--dark)
+}
+
 .socialButtons {
-  background-color: white;
-  font-size: 32px;
+  background-color: var(--bgColor);
+  font-size: 40px;
   transition: 0.4s;
   padding: 5px 20px;
   border-radius: 20px;
@@ -136,6 +166,7 @@ body {
 nav {
   background-color: rgb(102, 128, 110);
 }
+
 #nav-container {
   position: -webkit-sticky;
   position: -moz-sticky;
@@ -149,12 +180,13 @@ nav {
 /* api container custom css */
 #api-container {
   display: flex;
-  border: 2px solid black;
-  justify-content: space-evenly;
+  border: 2px solid var(--dark);
+  /* justify-content: space-evenly; */
 }
+
 /* Weather section */
 #weather-api {
-  border: 2px solid black;
+  border: 2px solid var(--dark);
   width: 50%;
   text-align: center;
   /* background-color: rgb(175,182,157); */
@@ -169,6 +201,7 @@ nav {
   margin-top: 1%;
   text-align: center;
 }
+
 #current-section {
   display: inline-block;
   width: 100%;
@@ -199,16 +232,19 @@ nav {
   width: 100%;
   justify-content: center;
 }
+
 #current-icon {
   margin: 0 auto;
   max-width: 10%;
   padding: 0%;
   text-align: center;
 }
+
 #current-title {
   text-align: center;
   margin: 0%;
 }
+
 #current-date {
   border-bottom: solid 1px gray;
   margin: 0%;
@@ -218,46 +254,56 @@ nav {
   display: flex;
   justify-content: center;
 }
+
 #current-btn {
   background-color: rgb(57, 61, 42);
   color: rgb(175, 182, 157);
   border-radius: 8px;
 }
+
 #current-btn:hover {
   box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.24),
     0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
 #weekly-btn {
   background-color: rgb(57, 61, 42);
   color: rgb(175, 182, 157);
   border-radius: 8px;
 }
+
 #weekly-btn:hover {
   box-shadow: 0 5px 16px 0 rgba(0, 0, 0, 0.24),
     0 10px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
 /* WEAHTER WEEKLY */
 #weekly-section-section {
   display: none;
 }
+
 #weekly-section {
   display: flex;
   flex-direction: column;
 }
+
 #Weekly-title {
   display: flex;
   justify-content: center;
   margin: 0%;
 }
+
 #weekly-display {
   display: flex;
   flex-direction: row;
   margin-left: 1%;
   justify-content: space-around;
 }
+
 #dayKey {
   padding-right: 1%;
 }
+
 .weekly-data {
   display: flex;
   justify-content: center;
@@ -273,15 +319,13 @@ nav {
   /* position: relative; */
   border: 2px solid black;
   width: 50%;
-  padding: 1px;
-  /* background-color: white; */
+  background-color: white;
 }
 
 /* HERO section css */
 #hero-container {
   border: 0px solid black;
   margin-left: 2%;
-  /* background-image: url(../images/street.png); */
 }
 
 #hero-title {
@@ -289,11 +333,11 @@ nav {
 }
 
 /* Purpose section css */
-#purpose-container {
-}
+
 
 #teamImg {
   float: left;
+  padding: 10px;
 }
 
 #purpose-title {
@@ -325,20 +369,20 @@ nav {
 }
 
 #heroShopButton {
-  background-color: black;
+  background-color: var(--green);
   color: white;
   font-size: 24px;
   transition: 0.4s;
   padding: 5px 20px;
   cursor: pointer;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(57, 61, 42, 0.2), 0 6px 20px 0 rgba(57, 61, 42, 0.19);
 }
 
 #heroShopButton:hover {
-  background-color: grey;
+  background-color: var(--dark);
   color: white;
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 16px 0 rgba(57, 61, 42, 0.24),
+    0 17px 50px 0 rgba(57, 61, 42, 0.19);
 }
 
 #socialMediaButtons {
@@ -351,19 +395,23 @@ nav {
   width: 100%;
 }
 
-#apparel-list {
-  position: fixed;
+.apparelImg {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.tee-row {
+/* .tee-row {
   padding: 15px;
-}
+} */
 
-.col-md {
+/* .col-md {
   width: 24%;
-}
+} */
 
-.col-md:hover {
+.apparelImg:hover {
   transform: scale(1.2);
   transition: 0.5s ease-in-out;
 }
@@ -379,6 +427,35 @@ nav {
 #nav-logo {
   float: left;
 }
+
+#signUpBtn {
+  background-color: var(--green);
+  color: white;
+}
+
+#signUpBtn:hover {
+  background-color: var(--dark);
+  color: white;
+}
+
+/* Style Placeholders */
+::-webkit-input-placeholder {
+  color: var(--dark);
+}
+::-moz-placeholder {
+  color: var(--dark);
+}
+:-ms-input-placeholder {
+  color: var(--dark);
+}
+::-ms-input-placeholder {
+  color: var(--dark);
+}
+::placeholder {
+  color: var(--dark);
+}
+
+
 
 /* 9000px and less */
 @media screen and (max-width: 9000px) {
@@ -418,11 +495,18 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
+  .brand-logo {
+    position: fixed;
+    height: 42px;
+    margin-top: 8px;
+  }
+
   #nav-logo {
     position: relative;
     float: left;
     left: 95px;
   }
+
 }
 
 @media screen and (max-width: 624px) {
@@ -446,5 +530,9 @@ nav {
     display: block;
     position: relative;
     right: 15px;
+  }
+
+  .hideMobile {
+    display: none; /* hides these 2 divs on small/mobile screens to keep icons centered */
   }
 }

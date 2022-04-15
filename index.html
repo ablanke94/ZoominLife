@@ -15,6 +15,11 @@
       href="./assets/materialize/css/materialize.css"
       media="screen,projection"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="Stylesheet" href="./assets/css/style.css" />
     <title>ZoominLife</title>
@@ -240,6 +245,7 @@
             type="email"
             placeholder="E-mail"
             class="validate"
+            id="emailInput"
           />
           <!-- <label for="email">Email</label> -->
         </form>
@@ -255,80 +261,27 @@
       <!-- end email input field -->
   
       <div class="row socialRow">
-        <div class="col s2 l2"></div>
-        <div class="col s8 l8 align center-align" id="socialMediaButtons">
+        <div class="col s2 l2 hideMobile"></div>
+        <div class="col s12 m8 l8 align center-align" id="socialMediaButtons">
           <a href="#" class="fa fa-facebook socialButtons"></a>
           <a href="#" class="fa fa-twitter socialButtons"></a>
           <a href="#" class="fa fa-instagram socialButtons"></a>
         </div>
-        <div class="col s2 l2"></div>
+        <div class="col s2 l2 hideMobile"></div>
       </div>
 
     </section>
     <section class="row" id="contact-us-container">
  <!--    <h1 id="contact-title">Contact Us</h1> -->
-        <div class="row contactListRow">
-            <div class="col s6">
-          <ul class="contactUsList">
-            <li><h5>Online Store: </h5></li>
-            <li>Warehouse Loaction: Austin, TX</li>
-            <li>
-              Phone:
-              <a href="tel:#">555-555-5555</a>
-            </li>
-            <li>
-              Email Us:
-              <a href="#">wesellbikes@zoominlife.com</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col s6" id="">
-              <table class="hoursTable">
-                <thead>
-                  <tr>
-                    <th class="ourHoursTitle"><h5>Our Hours:</h5></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Monday</td>
-                    <td>8:00 - 5:00</td>
-                  </tr>
-                  <tr>
-                    <td>Tuesday</td>
-                    <td>8:00 - 5:00</td>
-                  </tr>
-                  <tr>
-                    <td>Wednesday</td>
-                    <td>8:00 - 5:00</td>
-                  </tr>
-                  <tr>
-                    <td>Thursday</td>
-                    <td>8:00 - 5:00</td>
-                  </tr>
-                  <tr>
-                    <td>Friday</td>
-                    <td>8:00 - 5:00</td>
-                  </tr>
-                  <tr>
-                    <td>Saturday</td>
-                    <td>8:00 - 5:00</td>
-                  </tr>
-                  <tr>
-                    <td>Sunday</td>
-                    <td>8:00 - 5:00</td>
-                  </tr>
-                </tbody>
-              </table>
-        </div>
+      <div class="row contactListRow">
       </div>
       <div></div>
     </section>
     <section id="footer-container">
-      <div class="row">
-        <div class="col s6">
+      <div class="row footerRow">
+      <div class="col s12 m4 l4">
       <ul class="shopLinks">
-        <li><h5>Shop: </h5></li>
+        <li><h5>Shop </h5></li>
         <li>
           <a href="#">Bikes</a> 
         </li>
@@ -339,16 +292,13 @@
           <a href="#">Protective gear</a>
         </li>
         <li>
-          <a href="#">Sale</a>
-        </li>
-        <li>
           <a href="./apparel.html">Apparel</a>
         </li>
       </ul>
     </div>
-    <div class="col s6" id="">
+    <div class="col s12 m4 l4" id="">
           <ul class="supportLinks">
-            <li><h5>Support: </h5></li>
+            <li><h5>Support </h5></li>
             <li>
               <a href="#">Returns</a>
             </li>
@@ -360,6 +310,20 @@
             </li>
             <li>
               <a href="#">Sizing</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col s12 m4 l4">
+          <ul class="contactUsList">
+            <li><h5>Online Store </h5></li>
+            <li>Warehouse Loaction: Austin, TX</li>
+            <li>
+              Phone:
+              <a href="tel:#">555-555-5555</a>
+            </li>
+            <li>
+              <a href="mailto: wesellbikes@zoominlife.com">Email Us
+              </a>
             </li>
           </ul>
         </div>
