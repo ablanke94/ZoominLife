@@ -248,6 +248,12 @@ document
     localStorage.setItem('email', userEmail.value);
   });
 
+// Shop modal
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.modal');
+  M.Modal.init(elems);
+});
+
 // Trail api
 var script = document.createElement('script');
 script.setAttribute(
