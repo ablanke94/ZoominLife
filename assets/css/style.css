@@ -1,4 +1,11 @@
 /* start style.css */
+:root {
+  --green: #66806E;
+  --light: #FDDE8A;
+  --lightGreen: #AFB69D;
+  --dark: #393D2A;
+}
+
 body {
   background-color: #ffebbc;
 }
@@ -45,8 +52,8 @@ body {
 
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
+  top: 5px;
+  right: 5px;
   font-size: 60px;
 }
 
