@@ -1,9 +1,9 @@
 /* start style.css */
 :root {
-  --green: #66806E;
-  --light: #FDDE8A;
-  --lightGreen: #AFB69D;
-  --dark: #393D2A;
+  --green: #66806e;
+  --light: #fdde8a;
+  --lightGreen: #afb69d;
+  --dark: #393d2a;
   --bgColor: #ffebbc;
 }
 
@@ -87,13 +87,13 @@ body {
 .shopLinks a,
 .supportLinks a,
 .contactUsList a {
-  color: var(--green)
+  color: var(--green);
 }
 
 .shopLinks a:hover,
 .supportLinks a:hover,
 .contactUsList a:hover {
-  color: var(--dark)
+  color: var(--dark);
 }
 
 .socialButtons {
@@ -157,6 +157,7 @@ body {
 
 .weekly-day {
   display: flex;
+  padding-right: 2%;
   flex-direction: column;
   border-right-style: solid;
   border-width: 2px;
@@ -190,7 +191,7 @@ nav {
   width: 50%;
   text-align: center;
   /* background-color: rgb(175,182,157); */
-  background-color: rgb(248, 246, 246);
+  background-color: rgb(207, 207, 207);
 }
 
 #weather-section {
@@ -215,15 +216,19 @@ nav {
 
 #weather-nav {
   margin-bottom: 0%;
+
+  border-bottom: 2px solid gray;
 }
 
 #weather-nav-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 0 auto;
   height: fit-content;
+  padding-top: 2%;
+  width: 20%;
   padding-bottom: 1%;
-  border-bottom: 2px solid gray;
 }
 
 #current-container {
@@ -241,6 +246,8 @@ nav {
 }
 
 #current-title {
+  padding-top: 2%;
+  display: inline-block;
   text-align: center;
   margin: 0%;
 }
@@ -280,15 +287,18 @@ nav {
 /* WEAHTER WEEKLY */
 #weekly-section-section {
   display: none;
+  width: 100%;
 }
 
 #weekly-section {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 #Weekly-title {
-  display: flex;
+  padding-top: 2%;
+  display: none;
   justify-content: center;
   margin: 0%;
 }
@@ -334,19 +344,23 @@ nav {
 
 /* Purpose section css */
 
-
 #teamImg {
   float: left;
   padding: 10px;
 }
-
+#purpose-container {
+  margin: 0%;
+  background-color: #afb69d79;
+  width: 100%;
+}
 #purpose-title {
   text-align: center;
 }
 
 /* SIGN UP section css */
 #sign-up-container {
-  border: 0px solid black;
+  /* margin: 0%; */
+  border-bottom: 0px solid black;
   /*  height: 25vh; */
 }
 
@@ -375,7 +389,8 @@ nav {
   transition: 0.4s;
   padding: 5px 20px;
   cursor: pointer;
-  box-shadow: 0 8px 16px 0 rgba(57, 61, 42, 0.2), 0 6px 20px 0 rgba(57, 61, 42, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(57, 61, 42, 0.2),
+    0 6px 20px 0 rgba(57, 61, 42, 0.19);
 }
 
 #heroShopButton:hover {
@@ -437,7 +452,16 @@ nav {
   background-color: var(--dark);
   color: white;
 }
-
+#footer-container {
+  border-top: #3838382c solid 0.1px;
+  background-color: #66806e57;
+  margin-bottom: 0%;
+  padding-top: 2%;
+}
+.footerRow {
+  margin-bottom: 0%;
+  padding-bottom: 5%;
+}
 /* Style Placeholders */
 ::-webkit-input-placeholder {
   color: var(--dark);
@@ -454,8 +478,6 @@ nav {
 ::placeholder {
   color: var(--dark);
 }
-
-
 
 /* 9000px and less */
 @media screen and (max-width: 9000px) {
@@ -506,7 +528,6 @@ nav {
     float: left;
     left: 95px;
   }
-
 }
 
 @media screen and (max-width: 624px) {
