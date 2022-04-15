@@ -9,6 +9,7 @@
 
 body {
   background-color: var(--bgColor);
+  color: var(--dark); /* page font color */
   font-family: 'Lato', sans-serif; /* a little easier on the eyes // change font here */
 }
 .row {
@@ -74,10 +75,6 @@ body {
   margin: 0px;
   margin-bottom: 15px;
   width: 100%;
-}
-
-.footerRow{
-  display: flex;
 }
 
 .shopLinks,
@@ -183,13 +180,13 @@ nav {
 /* api container custom css */
 #api-container {
   display: flex;
-  border: 2px solid black;
+  border: 2px solid var(--dark);
   /* justify-content: space-evenly; */
 }
 
 /* Weather section */
 #weather-api {
-  border: 2px solid black;
+  border: 2px solid var(--dark);
   width: 50%;
   text-align: center;
   /* background-color: rgb(175,182,157); */
@@ -329,7 +326,6 @@ nav {
 #hero-container {
   border: 0px solid black;
   margin-left: 2%;
-  /* background-image: url(../images/street.png); */
 }
 
 #hero-title {
@@ -399,19 +395,23 @@ nav {
   width: 100%;
 }
 
-#apparel-list {
-  position: fixed;
+.apparelImg {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.tee-row {
+/* .tee-row {
   padding: 15px;
-}
+} */
 
-.col-md {
+/* .col-md {
   width: 24%;
-}
+} */
 
-.col-md:hover {
+.apparelImg:hover {
   transform: scale(1.2);
   transition: 0.5s ease-in-out;
 }
@@ -427,6 +427,35 @@ nav {
 #nav-logo {
   float: left;
 }
+
+#signUpBtn {
+  background-color: var(--green);
+  color: white;
+}
+
+#signUpBtn:hover {
+  background-color: var(--dark);
+  color: white;
+}
+
+/* Style Placeholders */
+::-webkit-input-placeholder {
+  color: var(--dark);
+}
+::-moz-placeholder {
+  color: var(--dark);
+}
+:-ms-input-placeholder {
+  color: var(--dark);
+}
+::-ms-input-placeholder {
+  color: var(--dark);
+}
+::placeholder {
+  color: var(--dark);
+}
+
+
 
 /* 9000px and less */
 @media screen and (max-width: 9000px) {

@@ -7,39 +7,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Import materialize.css -->
-    <link type="text/css" rel="stylesheet" href="./assets/materialize/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- font awesome ^ for social media buttons -->
+    <!-- Import materialize.css -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./assets/materialize/css/materialize.css"
+      media="screen,projection"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="Stylesheet" href="./assets/css/style.css" />
     <title>ZoominLife</title>
 </head>
 
 <body>
-    <section id="nav-container">
-        <nav id="navbar">
-            <div class="nav-wrapper">
-                <a href="./index.html">
-                    <img class="brand-logo" src="assets/images/ZOOMING.png">
-                 </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
-                </ul>
+    <header class="" id="nav-container">
+        <nav class="" id="navbar">
+          <div id="nav-logo">
+            <a href="./index.html">
+              <img class="brand-logo" src="assets/images/ZOOMING.png" />
+            </a>
+          </div>
+            <!-- for spacing purposes only -->
+          <!-- <div class=""></div> --> 
+          <div class="navbar-links">
+            <ul > <!-- class="right hide-on-med-and-down" id="nav-mobile" -->
+              <li class="something"><a href="#">Sass</a></li>
+              <li class="something"><a href="#">Components</a></li>
+              <li class="something"><a href="#">JavaScript</a></li>
+              <li class="something2">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+              </li>
+            </ul>
+          </div>
+          <div id="pancake" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="#">Sass</a>
+              <a href="#">Components</a>
+              <a href="#">JavaScript</a>
             </div>
+          </div>
+          
+          </div>
         </nav>
-    <section>
+      </header>
+    <!-- <section>
         <img class="shopHero" src="" alt="">
-    </section>
+    </section> -->
 <!--Section for Tees-->
-        <section id="apparel-list">
-            <div class="tee-row">
-                <img class="col-md" src="./assets/images/Shirt Mock1.png" alt="browntee">
-                <img class="col-md" src="./assets/images/Shirt Mock2.png" alt="tealtee">
-                <img class="col-md" src="./assets/images/Shirt Mock3.png" alt="redtee">
-                <img class="col-md" src="./assets/images/Shirt Mock4.png" alt="bluetee">
+        <section class="row center-align" id="apparel-list">
+            <div class="col s12 m6 l3">
+                <img class="apparelImg" src="./assets/images/Shirt Mock1.png" alt="browntee">
+            </div>
+            <div class="col s12 m6 l3">
+                <img class="apparelImg" src="./assets/images/Shirt Mock2.png" alt="tealtee">
+            </div>
+            <div class="col s12 m6 l3">
+                <img class="apparelImg" src="./assets/images/Shirt Mock3.png" alt="redtee">
+            </div>
+            <div class="col s12 m6 l3">
+                <img class="apparelImg" src="./assets/images/Shirt Mock4.png" alt="bluetee">
             </div>
         </section>
-    </section>
+
+        <section id="footer-container">
+            <div class="row footerRow">
+            <div class="col s12 m4 l4">
+            <ul class="shopLinks">
+              <li><h5>Shop </h5></li>
+              <li>
+                <a href="#">Bikes</a> 
+              </li>
+              <li>
+                <a href="#">Electric Bikes</a>
+              </li>
+              <li>
+                <a href="#">Protective gear</a>
+              </li>
+              <li>
+                <a href="./apparel.html">Apparel</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 m4 l4" id="">
+                <ul class="supportLinks">
+                  <li><h5>Support </h5></li>
+                  <li>
+                    <a href="#">Returns</a>
+                  </li>
+                  <li>
+                    <a href="#">Warranty</a>
+                  </li>
+                  <li>
+                    <a href="#">Shipping</a>
+                  </li>
+                  <li>
+                    <a href="#">Sizing</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col s12 m4 l4">
+                <ul class="contactUsList">
+                  <li><h5>Online Store </h5></li>
+                  <li>Warehouse Loaction: Austin, TX</li>
+                  <li>
+                    Phone:
+                    <a href="tel:#">555-555-5555</a>
+                  </li>
+                  <li>
+                    <a href="mailto: wesellbikes@zoominlife.com">Email Us
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div></div>
+          </section>
+
 
     <script type="text/javascript" src="./assets/materialize/js/materialize.js"></script>
     <script type="text/javascript" src="./assets/js/moment.js"></script>
