@@ -24,6 +24,8 @@ hr {
 }
 
 .longHr {
+  position: relative;
+  top: 1px;
   width: 99.8%;
   font-size: 1px;
   line-height: 0;
