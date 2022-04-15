@@ -16,7 +16,7 @@ ZoominLife is an online bicycle shop. Built to serve the community with daily an
 
 ```
 Alex Blanke - https://github.com/ablanke94
-Alex Ortega - 
+Alex Ortega - https://github.com/alexcreatedit 
 Gil Benvenitz - 
 Hunter McGrew - https://github.com/HunterMcGrew
 ```
