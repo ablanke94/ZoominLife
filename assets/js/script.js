@@ -227,6 +227,12 @@ function weeklyBtnClick(e) {
 }
 // function declaration END
 
+// Shop modal
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.modal');
+  M.Modal.init(elems);
+});
+
 //  Weather display button functionality Declaration
 currentBtn.addEventListener('click', currentBtnClick);
 weeklyBtn.addEventListener('click', weeklyBtnClick);
@@ -247,12 +253,6 @@ document
     var userEmail = document.getElementById('userEmail');
     localStorage.setItem('email', userEmail.value);
   });
-
-// Shop modal
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
-  M.Modal.init(elems);
-});
 
 // Trail api
 var script = document.createElement('script');
