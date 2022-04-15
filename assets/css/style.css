@@ -4,10 +4,12 @@
   --light: #FDDE8A;
   --lightGreen: #AFB69D;
   --dark: #393D2A;
+  --bgColor: #ffebbc;
 }
 
 body {
   background-color: #ffebbc;
+  font-family: 'Lato', sans-serif; /* a little easier on the eyes // change font here */
 }
 .row {
   width: 96%;
@@ -86,8 +88,8 @@ body {
 }
 
 .socialButtons {
-  background-color: white;
-  font-size: 32px;
+  background-color: var(--bgColor);
+  font-size: 40px;
   transition: 0.4s;
   padding: 5px 20px;
   border-radius: 20px;
@@ -487,5 +489,9 @@ nav {
     display: block;
     position: relative;
     right: 15px;
+  }
+
+  .hideMobile {
+    display: none; /* hides these 2 divs on small/mobile screens to keep icons centered */
   }
 }
