@@ -416,7 +416,7 @@ nav {
   margin: 0%;
   background-color: #afb69d79;
   width: 100%;
-  border-top: dotted 2px var(--dark);
+  
 }
 #purpose-title {
   padding-top: 3%;
@@ -448,7 +448,7 @@ nav {
 
 /* Footer section css */
 #footer-container {
-  border: 0px solid black;
+  border-top: 0px solid var(--dark);
 }
 
 /* shop button move up */
