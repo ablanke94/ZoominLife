@@ -36,10 +36,10 @@
           <!-- for spacing purposes only -->
         <!-- <div class=""></div> --> 
         <div class="navbar-links">
-          <ul > <!-- class="right hide-on-med-and-down" id="nav-mobile" -->
-            <li class="something"><a href="#">Sass</a></li>
-            <li class="something"><a href="#">Components</a></li>
-            <li class="something"><a href="#">JavaScript</a></li>
+          <ul>
+            <li class="something"><a href="#sign-up-container">Newsletter</a></li>
+            <li class="something"><a href="./apparel.html">Shop</a></li>
+            <li class="something"><a href="#footer-container">Contact Us</a></li>
             <li class="something2">
               <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
             </li>
@@ -48,9 +48,10 @@
         <div id="pancake" class="overlay">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <div class="overlay-content">
-            <a href="#">Sass</a>
-            <a href="#">Components</a>
-            <a href="#">JavaScript</a>
+            <a href="./index.html" onclick="closeNav()">Home</a>
+            <a href="#sign-up-container" onclick="closeNav()">Newsletter</a>
+            <a href="./apparel.html" onclick="closeNav()">Shop</a>
+            <a href="#footer-container" onclick="closeNav()">Contact Us</a>
           </div>
         </div>
         
@@ -60,17 +61,18 @@
     <section id="api-container">
       <div id="weather-api">
         <div class="row" id="weather-nav">
-          <h5 id="weather-api-title">Weather Forecast</h5>
-          <ul id="weather-nav-list" class="">
-            <li><button id="current-btn">Today</button></li>
-            <li><button id="weekly-btn">Weekly </button></li>
+          <h5 id="current-title"  data-display="visible">
+           Austin's Current Weather Forecast
+         </h5>
+         <h5 id="Weekly-title">Austin's Weekly Forecast</h5>
+          <ul id="weather-nav-list" class='block'>
+            <li><button class="waves-effect waves-light" id="current-btn">Today</button></li>
+            <li><button class="waves-effect waves-light" id="weekly-btn">Weekly </button></li>
           </ul>
         </div>
         <section id="current-section" data-display="visible">
           <div id="current-container">
-            <h5 id="current-title">
-              Austin's Current Weather Forecast
-            </h5>
+           
             <ul class="col s7" id="current-data">
               <li class="curr-data" ><h5 id="current-date"></h5></li>
               <li class="curr-data weather-icon" id="current-icon"></li>
@@ -85,7 +87,6 @@
 
         <section data-display="hidden" id="weekly-section-section">
           <div id="weekly-section">
-            <h5 id="Weekly-title">Austin's Weekly Forecast</h5>
             <ul id="weekly-display">
               <!-- <ul class="col s7" id="dayKey">
                 <h6>Day:</h6>
@@ -197,7 +198,7 @@
       </div>
       </div>
     </section>
-
+        <hr>
     <section class="row" id="purpose-container">
       <div class="row">
 
@@ -234,7 +235,7 @@
         </div>
       </div>
     </section>
-
+          
     <section class="row" id="sign-up-container">
       <div class="row signUpRow">
       <h4 id="sign-up-title">Sign Up</h4>
@@ -261,8 +262,10 @@
         </button>
       </div>
       <!-- end email input field -->
-  
+      <div class="row"></div> <!-- for spacing -->
+      <div class="row"></div>
       <div class="row socialRow">
+
         <div class="col s2 l2 hideMobile"></div>
         <div class="col s12 m8 l8 align center-align" id="socialMediaButtons">
           <a href="#" class="fa fa-facebook socialButtons"></a>
@@ -271,14 +274,13 @@
         </div>
         <div class="col s2 l2 hideMobile"></div>
       </div>
-
     </section>
     <section class="row" id="contact-us-container">
  <!--    <h1 id="contact-title">Contact Us</h1> -->
       <div class="row contactListRow">
       </div>
-      <div></div>
     </section>
+      <hr class="longHr">s
     <section id="footer-container">
       <div class="row footerRow">
       <div class="col s12 m4 l4">
