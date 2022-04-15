@@ -24,7 +24,7 @@ hr {
 }
 
 .longHr {
-  width: 100%;
+  width: 99.8%;
   font-size: 1px;
   line-height: 0;
   border-top: 1px solid var(--green);
