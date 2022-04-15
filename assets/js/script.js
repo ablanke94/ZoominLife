@@ -16,6 +16,7 @@ var currentBtn = document.getElementById('current-btn');
 var weeklyBtn = document.getElementById('weekly-btn');
 var currTitle = document.getElementById('current-title');
 var weeklyTitle = document.getElementById('Weekly-title');
+var weeklyTitle = document.getElementById('Weekly-title');
 console.log(currIcon);
 
 // function DECLARATIONS
@@ -205,7 +206,12 @@ let visibleAttributes = {
   'data-display': 'visible',
   style: 'display: inline-block',
 };
-
+let selectedBtn = {
+  style: 'background-color: rgb(255, 230, 3); color: rgb(32, 32, 32);',
+};
+let notSelectedBtn = {
+  style: 'background-color: rgb(57, 61, 42); color: rgb(175, 182, 157);',
+};
 // weather display Buttons click Functionality
 function currentBtnClick(e) {
   if (currentWeatherData.getAttribute('data-display') === 'hidden') {
@@ -214,6 +220,8 @@ function currentBtnClick(e) {
     setAttributes(currentWeatherData, visibleAttributes);
     setAttributes(weeklyTitle, hiddenAttributes);
     setAttributes(currTitle, visibleAttributes);
+    setAttributes(weeklyBtn, notSelectedBtn);
+    setAttributes(currentBtn, selectedBtn);
   }
 }
 function weeklyBtnClick(e) {
@@ -223,6 +231,8 @@ function weeklyBtnClick(e) {
     setAttributes(weeklyWeatherData, visibleAttributes);
     setAttributes(currTitle, hiddenAttributes);
     setAttributes(weeklyTitle, visibleAttributes);
+    setAttributes(currentBtn, notSelectedBtn);
+    setAttributes(weeklyBtn, selectedBtn);
   }
 }
 // function declaration END
