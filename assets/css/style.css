@@ -552,7 +552,7 @@ nav {
   .carousel .carousel-item {
     width: 225px;
     height: 225px;
-    top: 50px; /* moves the images down to center */
+    top: 50px; /* moves the images down to center */ 
   }
 }
 
@@ -574,4 +574,5 @@ nav {
   .hideMobile {
     display: none; /* hides these 2 divs on small/mobile screens to keep icons centered */
   }
+  
 }
