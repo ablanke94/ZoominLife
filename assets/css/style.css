@@ -12,6 +12,25 @@ body {
   color: var(--dark); /* page font color */
   font-family: 'Lato', sans-serif; /* a little easier on the eyes // change font here */
 }
+
+hr {
+  display: block;
+  position: relative;
+  width: 75%;
+  font-size: 1px;
+  line-height: 0;
+  border-top: 1px dotted var(--green);
+  border-bottom: 1px dotted var(--green);
+}
+
+.longHr {
+  width: 100%;
+  font-size: 1px;
+  line-height: 0;
+  border-top: 1px solid var(--green);
+  border-bottom: 1px solid var(--green);
+}
+
 .row {
   width: 96%;
   margin-left: 2%;
@@ -373,7 +392,6 @@ nav {
 /* Footer section css */
 #footer-container {
   border: 0px solid black;
-  /*  height: 25vh; */
 }
 
 /* shop button move up */
