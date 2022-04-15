@@ -61,17 +61,18 @@
     <section id="api-container">
       <div id="weather-api">
         <div class="row" id="weather-nav">
-          <h5 id="weather-api-title">Weather Forecast</h5>
-          <ul id="weather-nav-list" class="">
-            <li><button id="current-btn">Today</button></li>
-            <li><button id="weekly-btn">Weekly </button></li>
+          <h5 id="current-title"  data-display="visible">
+           Austin's Current Weather Forecast
+         </h5>
+         <h5 id="Weekly-title">Austin's Weekly Forecast</h5>
+          <ul id="weather-nav-list" class='block'>
+            <li><button class="waves-effect waves-light" id="current-btn">Today</button></li>
+            <li><button class="waves-effect waves-light" id="weekly-btn">Weekly </button></li>
           </ul>
         </div>
         <section id="current-section" data-display="visible">
           <div id="current-container">
-            <h5 id="current-title">
-              Austin's Current Weather Forecast
-            </h5>
+           
             <ul class="col s7" id="current-data">
               <li class="curr-data" ><h5 id="current-date"></h5></li>
               <li class="curr-data weather-icon" id="current-icon"></li>
@@ -86,7 +87,6 @@
 
         <section data-display="hidden" id="weekly-section-section">
           <div id="weekly-section">
-            <h5 id="Weekly-title">Austin's Weekly Forecast</h5>
             <ul id="weekly-display">
               <!-- <ul class="col s7" id="dayKey">
                 <h6>Day:</h6>
@@ -186,7 +186,7 @@
       </div>
       </div>
     </section>
-       
+        <hr>
     <section class="row" id="purpose-container">
       <div class="row">
 
@@ -223,6 +223,19 @@
         </div>
       </div>
     </section>
+      <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
     <section id="quote-section-container">
       <section id="quote-container">
         <h2 id="bike-quote">“It is by riding a bicycle that you learn the contours of a country best,
@@ -259,6 +272,7 @@
       <div class="row"></div> <!-- for spacing -->
       <div class="row"></div>
       <div class="row socialRow">
+
         <div class="col s2 l2 hideMobile"></div>
         <div class="col s12 m8 l8 align center-align" id="socialMediaButtons">
           <a href="#" class="fa fa-facebook socialButtons"></a>
